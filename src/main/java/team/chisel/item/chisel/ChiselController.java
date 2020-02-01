@@ -6,6 +6,7 @@ import java.util.Queue;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -85,6 +86,12 @@ public final class ChiselController {
 			ICarvingGroup group = Carving.chisel.getGroup(block, metadata);
 
 			if (group == null) {
+				return;
+			}
+
+			TileEntity te = event.world.getTileEntity(x, y, z);
+			if ( te != null) {
+				// Don't support chiseling tile entities
 				return;
 			}
 
