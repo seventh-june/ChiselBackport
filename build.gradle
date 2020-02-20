@@ -41,7 +41,7 @@ boolean dev = System.getenv("RELEASE") == null || System.getenv("RELEASE").equal
 ext.buildnumber = 0
 project.buildnumber = System.getenv('BUILD_NUMBER') == null ? "CUSTOM" : System.getenv('BUILD_NUMBER')
 
-version = dev ? "${branchname}-${buildnumber}-${project.ext.gitHash}" : "${mod_version}.${buildnumber}"
+version = minecraft_version + "-" + mod_version
 group = "team.chisel" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Chisel"
 
