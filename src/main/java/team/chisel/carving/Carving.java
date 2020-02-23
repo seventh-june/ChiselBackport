@@ -1,9 +1,6 @@
 package team.chisel.carving;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import com.cricketcraft.chisel.api.carving.CarvingUtils;
 import com.cricketcraft.chisel.api.carving.ICarvingGroup;
@@ -28,9 +25,11 @@ public class Carving implements ICarvingRegistry {
 	}
 
 	public static void construct() {
+		/* do nothing */
 	}
 
 	private Carving() {
+		/* do nothing */
 	}
 
 	@Override
@@ -50,7 +49,7 @@ public class Carving implements ICarvingRegistry {
 	public List<ICarvingVariation> getGroupVariations(Block block, int metadata) {
 		ICarvingGroup group = getGroup(block, metadata);
 		if (group == null)
-			return null;
+			return Collections.emptyList();
 
 		return group.getVariations();
 	}
@@ -66,12 +65,12 @@ public class Carving implements ICarvingRegistry {
 
 	@Override
 	public List<ItemStack> getItemsForChiseling(ItemStack chiseledItem) {
-		ArrayList<ItemStack> items = new ArrayList<ItemStack>();
+		ArrayList<ItemStack> items = new ArrayList<>();
 
 		ICarvingGroup group = null;
 
-		int[] oreids = OreDictionary.getOreIDs(chiseledItem);
-		for (int i : oreids) {
+		int[] oreIDs = OreDictionary.getOreIDs(chiseledItem);
+		for (int i : oreIDs) {
 			group = groups.getGroupByOre(OreDictionary.getOreName(i));
 			if (group != null) {
 				break;
@@ -85,33 +84,21 @@ public class Carving implements ICarvingRegistry {
 		if (group == null)
 			return items;
 
-		HashMap<String, Integer> mapping = new HashMap<String, Integer>();
+		HashSet<String> mapping = new HashSet<>();
 
 		List<ICarvingVariation> variations = group.getVariations();
 
-		if (!group.getVariations().isEmpty()) {
-			for (ICarvingVariation v : variations) {
-
-				String key = Block.getIdFromBlock(v.getBlock()) + "|" + v.getItemMeta();
-				if (mapping.containsKey(key))
-					continue;
-				mapping.put(key, 1);
-
-				items.add(new ItemStack(v.getBlock(), 1, v.getItemMeta()));
-			}
+		for (ICarvingVariation v : variations) {
+			String key = Block.getIdFromBlock(v.getBlock()) + "|" + v.getItemMeta();
+			if (mapping.add(key)) items.add(new ItemStack(v.getBlock(), 1, v.getItemMeta()));
 		}
 
-		ArrayList<ItemStack> ores;
 		String oreName = group.getOreName();
-		if (oreName != null && ((ores = OreDictionary.getOres(oreName)) != null)) {
+		if (oreName != null) {
+			ArrayList<ItemStack> ores = OreDictionary.getOres(oreName);
 			for (ItemStack stack : ores) {
-
 				String key = Item.getIdFromItem(stack.getItem()) + "|" + stack.getItemDamage();
-				if (mapping.containsKey(key))
-					continue;
-				mapping.put(key, 2);
-
-				items.add(stack);
+				if (mapping.add(key)) items.add(stack);
 			}
 		}
 
@@ -221,8 +208,7 @@ public class Carving implements ICarvingRegistry {
 
 	@Override
 	public List<String> getSortedGroupNames() {
-		List<String> names = new ArrayList<String>();
-		names.addAll(groups.getNames());
+		List<String> names = new ArrayList<>(groups.getNames());
 		Collections.sort(names);
 		return names;
 	}
