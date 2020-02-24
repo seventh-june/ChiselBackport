@@ -409,6 +409,11 @@ tile.metalOre.3.desc=An Old Relic from the land of Oneteufyv
 tile.metalOre.4.desc=테두리를 두른 블록
 tile.metalOre.5.desc=화려한 볼트 판
 
+# Stairs
+tile.chisel.aluminum_stairs.0.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.1.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.2.name=Aluminum Stairs
+
 # 선물 상자 (Present Chest)
 tile.chisel.present.name=선물 상자
 tile.chisel.present.desc=예쁜 선물 상자
@@ -718,7 +723,6 @@ tile.glass2.0.desc=비대칭의 납이 섞인 유리
 
 # 사암 (Sandstone Blocks)
 tile.chisel.sandstone.name=사암
-# 사암 (Sandstone)
 
 tile.sandstone.0.desc=문양있는 사암
 tile.sandstone.1.desc=사암 조약돌
@@ -1724,4 +1728,3 @@ container.chisel.mode.single=단일
 container.chisel.mode.panel=판
 container.chisel.mode.column=수직
 container.chisel.mode.row=수평
-# 도로선 (Road Line)

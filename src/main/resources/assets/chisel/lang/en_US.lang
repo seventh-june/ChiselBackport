@@ -409,6 +409,11 @@ tile.metalOre.3.desc=An Old Relic from the land of Oneteufyv
 tile.metalOre.4.desc=Egregiously Bordered Block
 tile.metalOre.5.desc=Fancy Bolted Plating
 
+#Stairs
+tile.chisel.aluminum_stairs.0.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.1.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.2.name=Aluminum Stairs
+
 #Present Chest
 tile.chisel.present.name=Present
 tile.chisel.present.desc=A pretty present chest

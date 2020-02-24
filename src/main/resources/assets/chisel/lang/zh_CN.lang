@@ -406,6 +406,11 @@ tile.metalOre.3.desc=欧尼特芙大陆的古物
 tile.metalOre.4.desc=新颖镶边方块
 tile.metalOre.5.desc=精致螺栓板面
 
+# Stairs
+tile.chisel.aluminum_stairs.0.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.1.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.2.name=Aluminum Stairs
+
 # Present Chest
 tile.chisel.present.name=礼物
 tile.chisel.present.desc=一个精致漂亮的礼物箱子
@@ -715,7 +720,6 @@ tile.glass2.0.desc=非对称式格栅铅框玻璃
 
 # Sandstone Blocks
 tile.chisel.sandstone.name=沙石
-# Sandstone
 
 tile.sandstone.0.desc=Sandstone Glyphs
 tile.sandstone.1.desc=Sandcobble
@@ -1249,6 +1253,7 @@ tile.cloud.4.desc=格状云朵砖
 tile.chisel.stained_glass_white.name=染色玻璃
 tile.chisel.stained_glass_orange.name=染色玻璃
 tile.chisel.stained_glass_magenta.name=染色玻璃
+tile.chisel.stained_glass_lightblue.name=染色玻璃
 tile.chisel.stained_glass_yellow.name=染色玻璃
 tile.chisel.stained_glass_lime.name=染色玻璃
 tile.chisel.stained_glass_pink.name=染色玻璃
@@ -1720,4 +1725,3 @@ container.chisel.mode.single=单个雕刻
 container.chisel.mode.panel=范围雕刻
 container.chisel.mode.column=竖向雕刻
 container.chisel.mode.row=横向雕刻
-tile.chisel.stained_glass_lightblue.name=染色玻璃

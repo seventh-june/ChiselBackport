@@ -406,6 +406,11 @@ tile.metalOre.3.desc=Старая реликвия из древних земе�
 tile.metalOre.4.desc=Хорошо огранённый блок
 tile.metalOre.5.desc=Красивое болтовое покрытие
 
+# Stairs
+tile.chisel.aluminum_stairs.0.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.1.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.2.name=Aluminum Stairs
+
 # Present Chest
 tile.chisel.present.name=Подарок
 tile.chisel.present.desc=Красивенький подарочный сундук
@@ -715,7 +720,6 @@ tile.glass2.0.desc=Асимметричное освинцованное сте�
 
 # Sandstone Blocks
 tile.chisel.sandstone.name=Песчаник
-# Sandstone
 
 tile.sandstone.0.desc=Песчаниковые глифы
 tile.sandstone.1.desc=Песчаниковый булыжник
