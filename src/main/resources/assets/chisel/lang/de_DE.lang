@@ -125,7 +125,7 @@ tile.beacon.blue.desc=Blau leuchtendes Leuchtfeuer
 tile.beacon.brown.desc=Braun leuchtendes Leuchtfeuer
 tile.beacon.cyan.desc=Türkis leuchtendes Leuchtfeuer
 tile.beacon.green.desc=Grün leuchtendes Leuchtfeuer
-tile.beacon.lightBlue.desc=Hellblau leuchtendes Leuchtfeuer
+tile.beacon.lightblue.desc=Hellblau leuchtendes Leuchtfeuer
 tile.beacon.silver.desc=Hellgrau leuchtendes Leuchtfeuer
 tile.beacon.lime.desc=Hellgrün leuchtendes Leuchtfeuer
 tile.beacon.magenta.desc=Lila leuchtendes Leuchtfeuer
@@ -438,9 +438,6 @@ tile.cobblestone.11.desc=Bruchstein mit Delle
 tile.cobblestone.12.desc=Bruchstein mit Tafel
 tile.cobblestone.13.desc=Bruchstein mit leuchtender Tafel
 tile.cobblestone.14.desc=Bruchstein mit dunkler Tafel
-
-#Sandstone Blocks
-tile.chisel.sandstone.name=Sandstein
 
 #Marble Blocks
 tile.chisel.marble.name=Marmor
@@ -1271,7 +1268,7 @@ tile.chisel.stained_glass_black.name=Schwarzes Glas
 tile.chisel.stained_glass_pane_white.name=Weiße Glasscheibe
 tile.chisel.stained_glass_pane_orange.name=Orange Glasscheibe
 tile.chisel.stained_glass_pane_magenta.name=Magenta Glasscheibe
-tile.chisel.stained_glass_pane_lightblue.name=Hellblaue Glasscheibe
+tile.chisel.stained_glass_pane_lightBlue.name=Hellblaue Glasscheibe
 tile.chisel.stained_glass_pane_yellow.name=Gelbe Glasscheibe
 tile.chisel.stained_glass_pane_lime.name=Hellgrün Glasscheibe
 tile.chisel.stained_glass_pane_pink.name=Rosa Glasscheibe
@@ -1724,3 +1721,8 @@ container.chisel.mode.single=Einzel
 container.chisel.mode.panel=Feld
 container.chisel.mode.column=Spalte
 container.chisel.mode.row=Zeile
+
+chisel.autochisel.upgrade.disabled=Upgrades Disabled
+tile.futura.5.desc=Psychedelic Poptart Rainbow.v02
+tile.chisel.stained_glass_forestry.name=Stained Glass
+

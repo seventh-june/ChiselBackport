@@ -113,10 +113,10 @@ tile.granite.6.desc=Granite Small Tiles
 tile.chisel.autoChisel.name=Auto Chisel
 autochisel.slot.chisel.tooltip=Chisel Slot
 autochisel.slot.target.tooltip=Target Slot
-autochisel.slot.speed.tooltip=Speed Upgrade
-autochisel.slot.automation.tooltip=Automation Upgrade
-autochisel.slot.stack.tooltip=Stack Upgrade
-autochisel.slot.reversion.tooltip=Reversion Upgrade
+autochisel.slot.speed.tooltip=Speed Upgrade Slot
+autochisel.slot.automation.tooltip=Automation Upgrade Slot
+autochisel.slot.stack.tooltip=Stack Upgrade Slot
+autochisel.slot.reversion.tooltip=Reversion Upgrade Slot
 chisel.autochisel.upgrade.disabled=Upgrades Disabled
 
 #Beacon
@@ -126,7 +126,7 @@ tile.beacon.blue.desc=Blue Beamed Beacon
 tile.beacon.brown.desc=Brown Beamed Beacon
 tile.beacon.cyan.desc=Cyan Beamed Beacon
 tile.beacon.green.desc=Green Beamed Beacon
-tile.beacon.lightBlue.desc=Light Blue Beamed Beacon
+tile.beacon.lightblue.desc=Light Blue Beamed Beacon
 tile.beacon.silver.desc=Light Gray Beamed Beacon
 tile.beacon.lime.desc=Lime Beamed Beacon
 tile.beacon.magenta.desc=Magenta Beamed Beacon
@@ -440,9 +440,6 @@ tile.cobblestone.11.desc=Cobblestone with Dent
 tile.cobblestone.12.desc=Cobblestone with Panel
 tile.cobblestone.13.desc=Cobblestone with Light Panel
 tile.cobblestone.14.desc=Cobblestone with Dark Panel
-
-#Sandstone Blocks
-tile.chisel.sandstone.name=Sandstone
 
 #Marble Blocks
 tile.chisel.marble.name=Marble
@@ -1255,7 +1252,7 @@ tile.cloud.4.desc=Gridded Cloud Bricks
 tile.chisel.stained_glass_white.name=Stained Glass
 tile.chisel.stained_glass_orange.name=Stained Glass
 tile.chisel.stained_glass_magenta.name=Stained Glass
-tile.chisel.stained_glass_lightBlue.name=Stained Glass
+tile.chisel.stained_glass_lightblue.name=Stained Glass
 tile.chisel.stained_glass_yellow.name=Stained Glass
 tile.chisel.stained_glass_lime.name=Stained Glass
 tile.chisel.stained_glass_pink.name=Stained Glass
