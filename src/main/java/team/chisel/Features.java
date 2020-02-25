@@ -3104,6 +3104,6 @@ public enum Features {
 	private static void registerSlabTop(Block bottom, Block top) {
 		String name = Block.blockRegistry.getNameForObject(bottom);
 		name = name.substring(name.indexOf(':') + 1) + "_top";
-		GameRegistry.registerBlock(top, ItemCarvableSlab.class, name);
+		GameRegistry.registerBlock(top, name);
 	}
 }
