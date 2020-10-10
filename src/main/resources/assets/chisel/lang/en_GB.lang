@@ -56,6 +56,14 @@ tile.shingles.5.desc=Black Big Squares
 tile.chisel.valentines.name=Valentines Block
 tile.valentines.0.desc=Valentines Bricks
 tile.valentines.1.desc=If it speaks, I wouldn't touch it
+tile.valentines.2.desc=
+tile.valentines.3.desc=
+tile.valentines.4.desc=
+tile.valentines.5.desc=
+tile.valentines.6.desc=
+tile.valentines.7.desc=
+tile.valentines.8.desc=
+tile.valentines.9.desc=
 
 # AntiBlocks
 tile.chisel.antiBlock.name=Anti Block
@@ -724,6 +732,7 @@ tile.glass2.0.desc=Asymmetrical Leaded Glass
 
 # Sandstone
 tile.chisel.sandstone.name=Sandstone
+tile.chisel.sandstone2.name=Sandstone
 
 tile.sandstone.0.desc=Sandstone Glyphs
 tile.sandstone.1.desc=Sandcobble
@@ -742,6 +751,8 @@ tile.sandstone.12.desc=Sandstone Block
 tile.sandstone.13.desc=Small Sandstone Blocks
 tile.sandstone.14.desc=Sandstone Mosaic
 tile.sandstone.15.desc=Stacked Sandstone Tiles
+tile.sandstone.16.desc=Sandstone Bricks
+tile.sandstone.17.desc=
 
 # Sandstone scribbles
 tile.chisel.sandstone_scribbles.name=Sandstone Scribbles
