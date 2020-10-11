@@ -196,7 +196,7 @@ public enum Features {
 		void addBlocks() {
 			BlockCarvable arcane = (BlockCarvable) new BlockCarvable(Material.rock).setCreativeTab(ChiselTabs.tabModdedChiselBlocks).setStepSound(Block.soundTypeStone);
 			Carving.chisel.addVariation("arcane", GameRegistry.findBlock("Thaumcraft", "blockCosmeticSolid"), 6, -5);
-			Carving.chisel.addVariation("arcane", GameRegistry.findBlock("Thaumcraft", "blockCosmeticSolid"), 7, -4);
+		//	Carving.chisel.addVariation("arcane", GameRegistry.findBlock("Thaumcraft", "blockCosmeticSolid"), 7, -4);
 			arcane.carverHelper.addVariation("tile.arcane.0.desc", 0, "arcane/moonEngrave");
 			arcane.carverHelper.addVariation("tile.arcane.1.desc", 1, "arcane/moonGlowAnim");
 			arcane.carverHelper.addVariation("tile.arcane.2.desc", 2, "arcane/arcaneTile");
