@@ -56,6 +56,14 @@ tile.shingles.5.desc=Schwarze große Vierecke
 tile.chisel.valentines.name=Valentinsblock
 tile.valentines.0.desc=Valentinsziegel
 tile.valentines.1.desc=Wenn es spricht, würde ich es nicht berühren!
+tile.valentines.2.desc=
+tile.valentines.3.desc=
+tile.valentines.4.desc=
+tile.valentines.5.desc=
+tile.valentines.6.desc=
+tile.valentines.7.desc=
+tile.valentines.8.desc=
+tile.valentines.9.desc=
 
 # AntiBlocks
 tile.chisel.antiBlock.name=Antiblock
@@ -720,6 +728,7 @@ tile.glass2.0.desc=Asymmetrisches Bleiglas
 
 # Sandstone
 tile.chisel.sandstone.name=Sandstein
+tile.chisel.sandstone2.name=Sandstein
 
 tile.sandstone.0.desc=Sandstein mit Glyphen
 tile.sandstone.1.desc=Sandpflaster
@@ -738,6 +747,8 @@ tile.sandstone.12.desc=Sandsteinblock
 tile.sandstone.13.desc=Schmaler Sandsteinblock
 tile.sandstone.14.desc=Sandsteinmosaik
 tile.sandstone.15.desc=Gestapelte Sandsteinfliesen
+tile.sandstone.16.desc=Sandsteinziegel
+tile.sandstone.17.desc=
 
 # Sandstone scribbles
 tile.chisel.sandstone_scribbles.name=Sandstein mit Gekritzel
