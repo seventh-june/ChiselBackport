@@ -461,9 +461,11 @@ public enum Features {
 			ItemChisel chisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.IRON).setCreativeTab(ChiselTabs.tabChisel);
 			ItemChisel diamondChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.DIAMOND).setCreativeTab(ChiselTabs.tabChisel);
 			ItemChisel obsidianChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.OBSIDIAN).setCreativeTab(ChiselTabs.tabChisel);
+			ItemChisel netherStarChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.NETHERSTAR).setCreativeTab(ChiselTabs.tabChisel);
 			GameRegistry.registerItem(chisel, "chisel");
 			GameRegistry.registerItem(diamondChisel, "diamondChisel");
 			GameRegistry.registerItem(obsidianChisel, "obsidianChisel");
+			GameRegistry.registerItem(netherStarChisel, "netherStarChisel");
 		}
 
 		@Override
@@ -472,10 +474,12 @@ public enum Features {
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.chisel), " YY", " YY", "X  ", 'X', "stickWood", 'Y', "ingotIron"));
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.diamondChisel), " YY", " YY", "x  ", 'x', "stickWood", 'Y', "gemDiamond"));
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.obsidianChisel), " YY", " YY", "x  ", 'x', "stickWood", 'Y', Blocks.obsidian));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.netherStarChisel), " YY", " YY", "x  ", 'x', "stickWood", 'Y', "netherStar"));
 			} else {
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.chisel), " Y", "X ", 'X', "stickWood", 'Y', "ingotIron"));
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.diamondChisel), " Y", "X ", 'X', "stickWood", 'Y', "gemDiamond"));
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.obsidianChisel), " Y", "X ", 'X', "stickWood", 'Y', Blocks.obsidian));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ChiselItems.netherStarChisel), " YY", " YY", "x  ", 'x', "stickWood", 'Y', "netherStar"));
 			}
 		}
 	},
