@@ -116,7 +116,7 @@ public class Configurations {
 		obsidianChiselAttackDamage = config.get(category, "obsidianChiselAttackDamage", 4,
 				"The extra attack damage points (in half hearts) that the obsidian chisel inflicts when it is used to attack an entity.").getInt();
 		netherStarChiselAttackDamage = config.get(category, "netherStarChiselAttackDamage", 6,
-				"The extra attack damage points (in half hearts) that the obsidian chisel inflicts when it is used to attack an entity.").getInt();
+				"The extra attack damage points (in half hearts) that the nether star chisel inflicts when it is used to attack an entity.").getInt();
 
 		/* block */
 		category = "block";
