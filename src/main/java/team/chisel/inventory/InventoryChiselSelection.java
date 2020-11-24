@@ -167,8 +167,11 @@ public class InventoryChiselSelection implements IInventory {
 
 	@Override
 	public void setInventorySlotContents(int slot, ItemStack stack) {
-		inventory[slot] = stack;
-		updateInventoryState(slot);
+		// we do not want external chisel variant updates
+		if (slot == normalSlots) {
+			inventory[slot] = stack;
+			updateInventoryState(slot);
+		}
 	}
 
 	@Override
