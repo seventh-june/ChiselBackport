@@ -1,5 +1,6 @@
 package team.chisel.inventory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.cricketcraft.chisel.api.IChiselItem;
@@ -15,17 +16,30 @@ import net.minecraft.item.ItemTool;
 
 public class InventoryChiselSelection implements IInventory {
 
-	ItemStack chisel = null;
+	ItemStack chisel;
 	public final static int normalSlots = 60;
-	public int activeVariations = 0;
 	ContainerChisel container;
 	ItemStack[] inventory;
+	private int currentScroll = 0;
+	private int maxScroll = 0;
 
 	public InventoryChiselSelection(ItemStack c) {
 		super();
 
 		inventory = new ItemStack[normalSlots + 1];
 		chisel = c;
+	}
+
+	public void setCurrentScroll(int currentScroll) {
+		this.currentScroll = currentScroll;
+	}
+
+	public int getCurrentScroll() {
+		return currentScroll;
+	}
+
+	public int getMaxScroll() {
+		return maxScroll;
 	}
 
 	public void onInventoryUpdate(int slot) {
@@ -95,10 +109,10 @@ public class InventoryChiselSelection implements IInventory {
 	}
 
 	public void clearItems() {
-		activeVariations = 0;
 		for (int i = 0; i < normalSlots; i++) {
 			inventory[i] = null;
 		}
+		maxScroll = 0;
 	}
 
 	public ItemStack getStackInSpecialSlot() {
@@ -124,12 +138,18 @@ public class InventoryChiselSelection implements IInventory {
 		if (!((IChiselItem) chisel.getItem()).canChisel(container.playerInventory.player.worldObj, chisel, General.getVariation(chiseledItem)))
 			return;
 
-		List<ItemStack> list = container.carving.getItemsForChiseling(chiseledItem);
-
-		activeVariations = 0;
-		while (activeVariations < normalSlots && activeVariations < list.size()) {
-			if (Block.blockRegistry.getNameForObject(Block.getBlockFromItem(list.get(activeVariations).getItem())) != null) {
-				inventory[activeVariations] = list.get(activeVariations);
+		List<ItemStack> list2 = container.carving.getItemsForChiseling(chiseledItem);
+		// DEBUG! REMOVE:
+		List<ItemStack> list = new ArrayList<>(list2);
+		list.addAll(list2);
+		if (list.size() > 61) {
+			list = list.subList(0, 61);
+		}
+		maxScroll = list.size();
+		int activeVariations = 0;
+		while (activeVariations < normalSlots && activeVariations + currentScroll < list.size()) {
+			if (Block.blockRegistry.getNameForObject(Block.getBlockFromItem(list.get(activeVariations + currentScroll).getItem())) != null) {
+				inventory[activeVariations] = list.get(activeVariations + currentScroll);
 				activeVariations++;
 			}
 		}
@@ -172,5 +192,4 @@ public class InventoryChiselSelection implements IInventory {
 
 		return !(stack != null && (stack.getItem() instanceof ItemChisel)) && i == normalSlots;
 	}
-
 }
