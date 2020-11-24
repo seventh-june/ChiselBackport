@@ -1,6 +1,5 @@
 package team.chisel.inventory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.cricketcraft.chisel.api.IChiselItem;

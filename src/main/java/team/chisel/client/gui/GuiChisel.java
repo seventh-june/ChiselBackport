@@ -148,23 +148,16 @@ public class GuiChisel extends GuiContainer {
             super.func_146977_a(slot);
         }
     }
+
     @Override
     protected void mouseClickMove(int x, int y, int c, long d) {
-        if (scrollBar != null) {
-            int currentScroll = scrollBar.getCurrentScroll();
-            scrollBar.click(x - guiLeft, y - guiTop);
-            if (currentScroll != scrollBar.getCurrentScroll()) {
-                menu.updateItems();
-            }
-        }
-        super.mouseClickMove(x, y, c, d );
+        scrollBar.click(x - guiLeft, y - guiTop);
+        super.mouseClickMove(x, y, c, d);
     }
 
     @Override
     protected void mouseClicked(int xCoord, int yCoord, int btn) {
-        if (scrollBar != null) {
-			scrollBar.click(xCoord - guiLeft, yCoord - guiTop);
-        }
+        scrollBar.click(xCoord - guiLeft, yCoord - guiTop);
         super.mouseClicked(xCoord, yCoord, btn);
     }
 
