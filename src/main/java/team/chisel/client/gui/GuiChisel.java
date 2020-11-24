@@ -163,11 +163,7 @@ public class GuiChisel extends GuiContainer {
     @Override
     protected void mouseClicked(int xCoord, int yCoord, int btn) {
         if (scrollBar != null) {
-            int currentScroll = scrollBar.getCurrentScroll();
 			scrollBar.click(xCoord - guiLeft, yCoord - guiTop);
-            if (currentScroll != scrollBar.getCurrentScroll()) {
-                menu.updateItems();
-            }
         }
         super.mouseClicked(xCoord, yCoord, btn);
     }
@@ -178,11 +174,7 @@ public class GuiChisel extends GuiContainer {
 
         int i = Mouse.getEventDWheel();
         if (i != 0 && scrollBar != null) {
-            int currentScroll = scrollBar.getCurrentScroll();
             scrollBar.wheel(i);
-            if (currentScroll != scrollBar.getCurrentScroll()) {
-                menu.updateItems();
-            }
         }
     }
 

@@ -3,6 +3,8 @@ package team.chisel.client.gui;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import team.chisel.inventory.ContainerChisel;
+import team.chisel.network.PacketHandler;
+import team.chisel.network.message.MessageScrollUpdate;
 
 public class GuiScrollbar {
     public static final ResourceLocation TEXTURE_RESOURCE_LOCATION = new ResourceLocation("minecraft", "textures/gui/container/creative_inventory/tabs.png");
@@ -62,6 +64,7 @@ public class GuiScrollbar {
 
     private void setCurrentScroll(int scroll) {
         container.inventory.setCurrentScroll(scroll * rowSize);
+        PacketHandler.INSTANCE.sendToServer(new MessageScrollUpdate(scroll * rowSize));
     }
 
     private int applyRange(int scroll) {

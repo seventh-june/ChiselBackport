@@ -31,7 +31,10 @@ public class InventoryChiselSelection implements IInventory {
 	}
 
 	public void setCurrentScroll(int currentScroll) {
-		this.currentScroll = currentScroll;
+		if (this.currentScroll != currentScroll) {
+			this.currentScroll = currentScroll;
+			updateItems();
+		}
 	}
 
 	public int getCurrentScroll() {
