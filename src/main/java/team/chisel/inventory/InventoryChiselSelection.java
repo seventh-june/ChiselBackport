@@ -141,13 +141,7 @@ public class InventoryChiselSelection implements IInventory {
 		if (!((IChiselItem) chisel.getItem()).canChisel(container.playerInventory.player.worldObj, chisel, General.getVariation(chiseledItem)))
 			return;
 
-		List<ItemStack> list2 = container.carving.getItemsForChiseling(chiseledItem);
-		// DEBUG! REMOVE:
-		List<ItemStack> list = new ArrayList<>(list2);
-		list.addAll(list2);
-		if (list.size() > 61) {
-			list = list.subList(0, 61);
-		}
+		List<ItemStack> list = container.carving.getItemsForChiseling(chiseledItem);
 		maxScroll = list.size();
 		int activeVariations = 0;
 		while (activeVariations < normalSlots && activeVariations + currentScroll < list.size()) {

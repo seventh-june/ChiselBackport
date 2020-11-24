@@ -78,8 +78,8 @@ public class GuiScrollbar {
 
         if (x > displayX && x <= displayX + width) {
             if (y > displayY && y <= displayY + scrollHeight) {
-                int currentScroll = (y - displayY);
-                currentScroll = Math.round(1.0f * currentScroll / scrollHeight) * getMaxScroll();
+                int currentScroll = (y - displayY - height / 2);
+                currentScroll = Math.round(1.0f * currentScroll * getMaxScroll() / (scrollHeight - height));
                 setCurrentScroll(applyRange(currentScroll));
             }
         }
