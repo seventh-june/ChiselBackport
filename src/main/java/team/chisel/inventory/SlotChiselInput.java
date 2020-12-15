@@ -30,6 +30,7 @@ public class SlotChiselInput extends Slot {
 			return;
 
 		super.onSlotChanged();
+		selInventory.setCurrentScroll(0);
 		selInventory.updateItems();
 	}
 
