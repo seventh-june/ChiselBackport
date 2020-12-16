@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import codechicken.nei.api.GuiInfo;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import team.chisel.carving.Carving;
@@ -88,7 +89,7 @@ public class Compatibility {
 		if (Loader.isModLoaded("EE3")) {
 			loadEE3Values();
 		}
-		if (Loader.isModLoaded("NotEnoughItems")) {
+		if (Loader.isModLoaded("NotEnoughItems") && event.getSide() == Side.CLIENT) {
 			// disable chiseling by scrolling over itemstack
 			GuiInfo.customSlotGuis.add(GuiChisel.class);
 		}
