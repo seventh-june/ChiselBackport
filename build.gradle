@@ -95,6 +95,10 @@ repositories {
         name 'Chisel Repo'
         url "http://maven.tterrag.com/"
     }
+	    ivy {
+        name = "gtnh_download_source_ee3"
+        artifactPattern("http://downloads.gtnewhorizons.com/Mods_for_Jenkins/[module]-[revision].[ext]")
+    }
 
 
 }
