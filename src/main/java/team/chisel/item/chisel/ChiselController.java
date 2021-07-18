@@ -69,6 +69,11 @@ public final class ChiselController {
 		ItemStack held = event.entityPlayer.getCurrentEquippedItem();
 		int slot = event.entityPlayer.inventory.currentItem;
 
+		//Prevents a crash when activated from a Battlegear slot.
+		if(slot > 8 || slot < 0) {
+			return;
+		}
+		
 		if (held == null || !(held.getItem() instanceof IChiselItem)) {
 			return;
 		}
