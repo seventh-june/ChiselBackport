@@ -148,7 +148,7 @@ public class Configurations {
 
 		/* features */
 		for (Features feature : Features.values()) {
-			features.putIfAbsent(featureName(feature), config.get("features", featureName(feature), true).getBoolean(true));
+			features.put(featureName(feature), config.get("features", featureName(feature), true).getBoolean(true));
 		}
 
 		if (config.hasChanged()) {
