@@ -1,6 +1,8 @@
 package team.chisel.config;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import net.minecraft.item.ItemDye;
 import net.minecraftforge.common.config.Configuration;
@@ -60,6 +62,8 @@ public class Configurations {
 	public static int[] configColors = new int[ItemDye.field_150923_a.length];
 
 	public static boolean fullBlockConcrete;
+
+	public static Map<String, Boolean> features = new HashMap<>();
 
 	public static boolean refreshConfig() {
 
@@ -142,6 +146,11 @@ public class Configurations {
 			}
 		}
 
+		/* features */
+		for (Features feature : Features.values()) {
+			features.put(featureName(feature), config.get("features", featureName(feature), true).getBoolean(true));
+		}
+
 		if (config.hasChanged()) {
 			config.save();
 		}
@@ -149,7 +158,7 @@ public class Configurations {
 	}
 
 	public static boolean featureEnabled(Features feature) {
-		return config.get("features", featureName(feature), true).getBoolean(true) && refreshConfig();
+		return features.getOrDefault(featureName(feature), false);
 	}
 
 	/**
