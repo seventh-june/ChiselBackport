@@ -4,7 +4,7 @@ import cpw.mods.fml.common.ModAPIManager;
 
 public class CTMLib {
 	
-	public static final String VERSION = "GRADLETOKEN_VERSION";
+	public static final String VERSION = "1.4.1";
 
 	private static boolean chiselPresent, chiselInitialized;
 

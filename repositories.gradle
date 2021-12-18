@@ -2,10 +2,6 @@
 
 repositories {
     maven {
-        name 'Chisel Repo'
-        url "http://maven.tterrag.com/"
-    }
-    maven {
         url "https://cursemaven.com"
     }
     maven {

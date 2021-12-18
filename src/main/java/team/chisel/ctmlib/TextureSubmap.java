@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import lombok.experimental.Delegate;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,7 +26,7 @@ public class TextureSubmap implements IIcon, ISubmap {
 	}
 
 	private int width, height;
-	@Delegate
+
 	private IIcon baseIcon;
 
 	protected IIcon[][] icons;
@@ -109,6 +108,51 @@ public class TextureSubmap implements IIcon, ISubmap {
 				icons[x][y] = new TextureVirtual(getBaseIcon(), width, height, x, y);
 			}
 		}
+	}
+
+	@Override
+	public int getIconWidth() {
+		return baseIcon.getIconWidth();
+	}
+
+	@Override
+	public int getIconHeight() {
+		return baseIcon.getIconHeight();
+	}
+
+	@Override
+	public float getMinU() {
+		return baseIcon.getMinU();
+	}
+
+	@Override
+	public float getMaxU() {
+		return baseIcon.getMaxU();
+	}
+
+	@Override
+	public float getInterpolatedU(double p_94214_1_) {
+		return baseIcon.getInterpolatedU(p_94214_1_);
+	}
+
+	@Override
+	public float getMinV() {
+		return baseIcon.getMinV();
+	}
+
+	@Override
+	public float getMaxV() {
+		return baseIcon.getMaxV();
+	}
+
+	@Override
+	public float getInterpolatedV(double p_94207_1_) {
+		return baseIcon.getInterpolatedV(p_94207_1_);
+	}
+
+	@Override
+	public String getIconName() {
+		return baseIcon.getIconName();
 	}
 
 	private class TextureVirtual implements IIcon {
