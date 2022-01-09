@@ -16,7 +16,7 @@ item.chisel.chisel.desc.modes=Has multiple modes for chiseling.
 
 item.chisel.chisel_diamond.name=Diamond Chisel
 item.chisel.chisel_obsidian.name=Obsidian Chisel
-item.chisel.chisel_netherstar.name=Nether Star Chisel
+item.chisel.chisel_netherstar.name=Bedrockium Сhisel
 
 item.ballMoss.name=Ball O' Moss
 item.ballMoss.desc=Right-Click to throw. This will turn Cobblestone to Moss Stone on impact.
@@ -34,7 +34,7 @@ item.upgrade_automation.desc=Allows things to push in and out of the Auto Chisel
 item.upgrade_stack.desc=Allows it to manufacture stacks at a time
 item.upgrade_reversion.desc=Reverts the base slot to its original form
 
-# Block localizations
+#Block localizations
 
 #Chisel 2
 
@@ -1723,7 +1723,7 @@ black.pane.glass.noborder.desc=Black Borderless Glass
 black.pane.glass.quadrant.desc=Black Quadrant Glass
 black.pane.glass.fancyquadrant.desc=Black Fancy Quadrant Glass
 
-# Creative Tab localizations
+#Creative Tab localizations
 itemGroup.tabOtherChiselBlocks=Other Chisel Blocks
 itemGroup.tabStoneChiselBlocks=Stone Chisel Blocks
 itemGroup.tabWoodChiselBlocks=Wood Chisel Blocks
