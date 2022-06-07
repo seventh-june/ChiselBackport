@@ -2,7 +2,6 @@ package team.chisel;
 
 import java.util.List;
 
-import net.minecraft.block.BlockFire;
 import team.chisel.block.*;
 import team.chisel.carving.Carving;
 import team.chisel.client.render.SubmapManagerAntiblock;

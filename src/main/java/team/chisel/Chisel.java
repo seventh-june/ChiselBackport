@@ -63,6 +63,7 @@ public class Chisel {
 	public static final BlockCarvable.SoundType soundHolystoneFootstep = new BlockCarvable.SoundType("holystone", 1.0f, 1.0f);
 	public static final BlockCarvable.SoundType soundMetalFootstep = new BlockCarvable.SoundType("metal", 1.0f, 1.0f);
 	public static boolean multipartLoaded = false;
+	public static boolean gtnhLoaded = false;
 	public static int renderEldritchId;
 	public static int renderAutoChiselId;
 	public static int renderGlowId;
@@ -137,6 +138,9 @@ public class Chisel {
 		ChiselController.INSTANCE.preInit();
 		if (Loader.isModLoaded("ForgeMultipart")) {
 			new FMPCompat().init();
+		}
+		if (Loader.isModLoaded("dreamcraft")) {
+		    gtnhLoaded = true;
 		}
 		proxy.preInit();
 	}
