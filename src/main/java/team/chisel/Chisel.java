@@ -124,13 +124,16 @@ public class Chisel {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		FMLCommonHandler.instance().registerCrashCallable(new ChiselCrashCallable());
-
+		
 		File configFile = event.getSuggestedConfigurationFile();
 		Configurations.configExists = configFile.exists();
 		Configurations.config = new Configuration(configFile);
 		Configurations.config.load();
 		Configurations.refreshConfig();
 
+        if (Loader.isModLoaded("dreamcraft")) {
+            gtnhLoaded = true;
+        }
 		TabsInit.preInit();
 		Features.preInit();
 		Statistics.init();
@@ -138,9 +141,6 @@ public class Chisel {
 		ChiselController.INSTANCE.preInit();
 		if (Loader.isModLoaded("ForgeMultipart")) {
 			new FMPCompat().init();
-		}
-		if (Loader.isModLoaded("dreamcraft")) {
-		    gtnhLoaded = true;
 		}
 		proxy.preInit();
 	}
