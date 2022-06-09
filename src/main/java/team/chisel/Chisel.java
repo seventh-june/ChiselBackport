@@ -63,6 +63,7 @@ public class Chisel {
 	public static final BlockCarvable.SoundType soundHolystoneFootstep = new BlockCarvable.SoundType("holystone", 1.0f, 1.0f);
 	public static final BlockCarvable.SoundType soundMetalFootstep = new BlockCarvable.SoundType("metal", 1.0f, 1.0f);
 	public static boolean multipartLoaded = false;
+	public static boolean gtnhLoaded = false;
 	public static int renderEldritchId;
 	public static int renderAutoChiselId;
 	public static int renderGlowId;
@@ -123,13 +124,16 @@ public class Chisel {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		FMLCommonHandler.instance().registerCrashCallable(new ChiselCrashCallable());
-
+		
 		File configFile = event.getSuggestedConfigurationFile();
 		Configurations.configExists = configFile.exists();
 		Configurations.config = new Configuration(configFile);
 		Configurations.config.load();
 		Configurations.refreshConfig();
 
+        if (Loader.isModLoaded("dreamcraft")) {
+            gtnhLoaded = true;
+        }
 		TabsInit.preInit();
 		Features.preInit();
 		Statistics.init();

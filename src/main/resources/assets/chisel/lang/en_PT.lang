@@ -15,6 +15,8 @@ item.chisel.chisel.desc.modes=Has multiple modes for chiseling.
 
 item.chisel.chisel_diamond.name=Diamond Chisel
 item.chisel.chisel_obsidian.name=Obsidian Chisel
+item.chisel.chisel_netherstar.name=Nether Star Chisel
+item.chisel.chisel_netherstar.gtnh.name=Bedrockium Chisel
 
 # Item localizations
 item.ballMoss.name=Ball O' Moss

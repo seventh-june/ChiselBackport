@@ -51,6 +51,11 @@ public class ItemChisel extends Item implements IChiselItem {
 		this.type = type;
 		setMaxStackSize(1);
 		setTextureName(Chisel.MOD_ID + ":chisel_" + type.name().toLowerCase(Locale.ENGLISH));
+		if(type == ChiselType.NETHERSTAR && Chisel.gtnhLoaded) {
+	        setUnlocalizedName(Chisel.MOD_ID + ".chisel_" + type.name().toLowerCase() + ".gtnh");
+		} else {
+	        setUnlocalizedName(Chisel.MOD_ID + ".chisel_" + type.name().toLowerCase());
+		}
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -79,11 +84,6 @@ public class ItemChisel extends Item implements IChiselItem {
 			return repairMaterial.getItem().equals(Items.nether_star);
 		}
 		return false;
-	}
-
-	@Override
-	public String getUnlocalizedName(ItemStack stack) {
-		return "item." + Chisel.MOD_ID + ".chisel_" + type.name().toLowerCase();
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
