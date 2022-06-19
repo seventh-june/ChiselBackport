@@ -1,6 +1,5 @@
 package team.chisel.utils;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -13,6 +12,7 @@ import java.util.List;
  */
 public class RecipeUtil {
 
+    @SuppressWarnings("unchecked")
     public static boolean isCraftable(ItemStack stack){
         for (IRecipe recipe : (List<IRecipe>)CraftingManager.getInstance().getRecipeList()){
             if (recipe.getRecipeOutput()==null){
