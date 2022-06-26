@@ -5,12 +5,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import team.chisel.block.tileentity.TileEntityPresent;
 
 public class ContainerPresent extends Container {
 
 	private IInventory lower;
 	private int rows;
-
+    private boolean isContainerValid = true;
 	public ContainerPresent(IInventory player, IInventory chest) {
 		lower = chest;
 		rows = chest.getSizeInventory() / 9;
@@ -68,6 +69,19 @@ public class ContainerPresent extends Container {
 
 	@Override
 	public boolean canInteractWith(EntityPlayer p_75145_1_) {
-		return true;
+		return isContainerValid;
 	}
+
+    @Override
+    public void detectAndSendChanges()
+    {
+        TileEntityPresent te = (TileEntityPresent)lower;
+        if( te != null && te.hasWorldObj() && !te.getWorldObj().isRemote)
+        {
+            if (te.getWorldObj().getTileEntity(te.xCoord, te.yCoord, te.zCoord) != te)
+                isContainerValid = false;
+        }
+        super.detectAndSendChanges();
+    }
+
 }
