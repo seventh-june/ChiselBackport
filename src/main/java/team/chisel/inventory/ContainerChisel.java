@@ -103,6 +103,7 @@ public class ContainerChisel extends Container {
 				entity.inventory.setItemStack(null);
 
 				if (!this.mergeItemStack(itemstack1, InventoryChiselSelection.normalSlots + 1, InventoryChiselSelection.normalSlots + 1 + 36, false)) {
+                    entity.inventory.setItemStack(itemstack1);
 					return null;
 				}
 			}
