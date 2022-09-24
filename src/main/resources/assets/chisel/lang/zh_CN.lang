@@ -16,7 +16,7 @@ item.chisel.chisel.desc.modes=拥有多种雕刻模式.
 
 item.chisel.chisel_diamond.name=钻石凿子
 item.chisel.chisel_obsidian.name=黑曜石凿子
-item.chisel.chisel_netherstar.name=Nether Star Chisel
+item.chisel.chisel_netherstar.name=下界之星凿子
 item.chisel.chisel_netherstar.gtnh.name=基岩凿子
 
 item.ballMoss.name=苔藓球
@@ -1742,4 +1742,3 @@ container.chisel.mode.single=单个雕刻
 container.chisel.mode.panel=范围雕刻
 container.chisel.mode.column=竖向雕刻
 container.chisel.mode.row=横向雕刻
-
