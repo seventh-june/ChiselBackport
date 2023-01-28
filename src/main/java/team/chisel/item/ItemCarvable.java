@@ -5,6 +5,7 @@ import java.util.List;
 import com.cricketcraft.chisel.api.ICarvable;
 import com.cricketcraft.chisel.api.carving.IVariationInfo;
 
+import net.minecraft.util.StatCollector;
 import team.chisel.config.Configurations;
 import team.chisel.utils.General;
 import net.minecraft.block.Block;
@@ -52,5 +53,6 @@ public class ItemCarvable extends ItemBlock {
 			return;
 
 		lines.add(var.getDescription());
+		lines.add(StatCollector.translateToLocal("item.chisel.nomobspawnsonthisblock.desc"));
 	}
 }
