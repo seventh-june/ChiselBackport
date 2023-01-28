@@ -7,6 +7,7 @@ import com.cricketcraft.chisel.api.carving.CarvableHelper;
 import com.cricketcraft.chisel.api.carving.IVariationInfo;
 import com.cricketcraft.chisel.api.rendering.ClientUtils;
 
+import net.minecraft.entity.EnumCreatureType;
 import team.chisel.Chisel;
 import com.cricketcraft.chisel.api.ChiselTabs;
 import net.minecraft.block.Block;
@@ -100,7 +101,7 @@ public class BlockCarvable extends Block implements ICarvable {
 
 		/**
 		 * Creates a SoundType with automatic names for step and break sounds. Sound names dig.soundName and step.soundName must be specified in the sounds.json
-		 * 
+		 *
 		 * @param soundName
 		 *            block of the sound. Will automatically be expanded to "mod:dig.soundName" and "mod:step.soundName" respectively)
 		 * @param volume
@@ -117,7 +118,7 @@ public class BlockCarvable extends Block implements ICarvable {
 
 		/**
 		 * Creates a SoundType with manual names for step and break sounds. Sound names must be specified in the sounds.json
-		 * 
+		 *
 		 * @param soundNameBreak
 		 *            block break sound
 		 * @param soundNameStep
@@ -136,7 +137,7 @@ public class BlockCarvable extends Block implements ICarvable {
 
 		/**
 		 * Creates a SoundType with manual names for step, break and place sounds. Sound names must be specified in the sounds.json
-		 * 
+		 *
 		 * @param soundNameBreak
 		 *            block break sound
 		 * @param soundNameStep
@@ -179,4 +180,8 @@ public class BlockCarvable extends Block implements ICarvable {
 				return this.soundNamePlace;
 		}
 	}
+    @Override
+    public boolean canCreatureSpawn(EnumCreatureType type, IBlockAccess world, int x, int y, int z) {
+        return false;
+    }
 }
