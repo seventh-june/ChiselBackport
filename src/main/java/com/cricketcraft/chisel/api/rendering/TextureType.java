@@ -33,7 +33,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SuppressWarnings("unchecked")
 public enum TextureType {
 
-	// @formatter:off
+    // @formatter:off
 	TOPBOTSIDE("top", "bottom", "side"){
 		@Override
 		protected Object registerIcons(ICarvingVariation variation, String modName, String texturePath, IIconRegister register) {

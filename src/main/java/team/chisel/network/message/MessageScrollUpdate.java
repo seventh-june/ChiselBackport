@@ -1,18 +1,18 @@
 package team.chisel.network.message;
 
+import net.minecraft.inventory.Container;
+
+import team.chisel.inventory.ContainerChisel;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
-import net.minecraft.inventory.Container;
-import team.chisel.inventory.ContainerChisel;
 
 public class MessageScrollUpdate implements IMessage {
 
     private int currentScroll;
 
-    public MessageScrollUpdate() {
-    }
+    public MessageScrollUpdate() {}
 
     public MessageScrollUpdate(int scroll) {
         currentScroll = scroll;

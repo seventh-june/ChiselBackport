@@ -12,16 +12,16 @@ import cpw.mods.fml.relauncher.Side;
 
 public class PacketHandler {
 
-	public static final SimpleNetworkWrapper INSTANCE = new SimpleNetworkWrapper(Chisel.MOD_ID);
+    public static final SimpleNetworkWrapper INSTANCE = new SimpleNetworkWrapper(Chisel.MOD_ID);
 
-	public static void init() {
-		int id = 0;
+    public static void init() {
+        int id = 0;
 
-		INSTANCE.registerMessage(MessageChiselSound.Handler.class, MessageChiselSound.class, id++, Side.CLIENT);
-		INSTANCE.registerMessage(MessageSlotUpdate.Handler.class, MessageSlotUpdate.class, id++, Side.CLIENT);
-		INSTANCE.registerMessage(MessageAutoChisel.Handler.class, MessageAutoChisel.class, id++, Side.CLIENT);
-		INSTANCE.registerMessage(MessageChiselMode.Handler.class, MessageChiselMode.class, id++, Side.SERVER);
-		INSTANCE.registerMessage(MessagePresentConnect.Handler.class, MessagePresentConnect.class, id++, Side.CLIENT);
-		INSTANCE.registerMessage(MessageScrollUpdate.Handler.class, MessageScrollUpdate.class, id++, Side.SERVER);
-	}
+        INSTANCE.registerMessage(MessageChiselSound.Handler.class, MessageChiselSound.class, id++, Side.CLIENT);
+        INSTANCE.registerMessage(MessageSlotUpdate.Handler.class, MessageSlotUpdate.class, id++, Side.CLIENT);
+        INSTANCE.registerMessage(MessageAutoChisel.Handler.class, MessageAutoChisel.class, id++, Side.CLIENT);
+        INSTANCE.registerMessage(MessageChiselMode.Handler.class, MessageChiselMode.class, id++, Side.SERVER);
+        INSTANCE.registerMessage(MessagePresentConnect.Handler.class, MessagePresentConnect.class, id++, Side.CLIENT);
+        INSTANCE.registerMessage(MessageScrollUpdate.Handler.class, MessageScrollUpdate.class, id++, Side.SERVER);
+    }
 }
