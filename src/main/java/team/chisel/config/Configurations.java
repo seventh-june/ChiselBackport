@@ -28,6 +28,7 @@ public class Configurations {
 	public static boolean enableFMP;
 	public static boolean chiselStoneToCobbleBricks;
 	public static boolean chiselBackToVanillaLeaves;
+	public static boolean canMobsSpawnOnTheChiselBlocks;
 
 	public static int marbleAmount;
 	public static int limestoneAmount;
@@ -82,6 +83,7 @@ public class Configurations {
 		chiselStoneToCobbleBricks = config.get(category, "chiselStoneToCobbleBricks", true, "Chisel stone to cobblestone and bricks by left clicking.").getBoolean(false);
 		chiselBackToVanillaLeaves = config
 				.get(category, "chiselBackToVanillaLeaves", false, "If this is true, you can chisel from the chisel leaves back to vanilla ones. If it is false, you cannot.").getBoolean(false);
+        canMobsSpawnOnTheChiselBlocks = config.get(category, "canMobsSpawnOnTheChiselBlocks", false, "Can mobs Spawn on the Chisel Blocks").getBoolean();
 
 		/* worldgen */
 		category = "worldgen";

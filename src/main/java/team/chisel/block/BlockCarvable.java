@@ -19,11 +19,13 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import team.chisel.config.Configurations;
 
 public class BlockCarvable extends Block implements ICarvable {
 
 	public CarvableHelper carverHelper;
 	private boolean isAlpha;
+    private static final boolean canMobsSpawnOnTheChiselBlocks = Configurations.canMobsSpawnOnTheChiselBlocks;
 
 	public BlockCarvable() {
 		this(Material.rock);
@@ -182,6 +184,6 @@ public class BlockCarvable extends Block implements ICarvable {
 	}
     @Override
     public boolean canCreatureSpawn(EnumCreatureType type, IBlockAccess world, int x, int y, int z) {
-        return false;
+        return canMobsSpawnOnTheChiselBlocks;
     }
 }
