@@ -16,6 +16,12 @@ import team.chisel.utils.General;
 import com.cricketcraft.chisel.api.ICarvable;
 import com.cricketcraft.chisel.api.carving.IVariationInfo;
 
+import team.chisel.config.Configurations;
+import team.chisel.utils.General;
+
+import com.cricketcraft.chisel.api.ICarvable;
+import com.cricketcraft.chisel.api.carving.IVariationInfo;
+
 public class ItemCarvable extends ItemBlock {
 
     public ItemCarvable(Block block) {

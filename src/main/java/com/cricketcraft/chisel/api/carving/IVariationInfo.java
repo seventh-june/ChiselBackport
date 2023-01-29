@@ -6,9 +6,9 @@ import com.cricketcraft.chisel.api.rendering.TextureType;
 
 public interface IVariationInfo extends ISubmapManager {
 
-	ICarvingVariation getVariation();
+    ICarvingVariation getVariation();
 
-	String getDescription();
+    String getDescription();
 
-	TextureType getType();
+    TextureType getType();
 }

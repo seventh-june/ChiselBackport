@@ -5,12 +5,12 @@ import net.minecraft.init.Blocks;
 
 public class BlockLeaf extends BlockCarvable {
 
-	public BlockLeaf(Material material) {
-		super(material);
-	}
+    public BlockLeaf(Material material) {
+        super(material);
+    }
 
-	@Override
-	public boolean isOpaqueCube() {
-		return Blocks.leaves.isOpaqueCube();
-	}
+    @Override
+    public boolean isOpaqueCube() {
+        return Blocks.leaves.isOpaqueCube();
+    }
 }
