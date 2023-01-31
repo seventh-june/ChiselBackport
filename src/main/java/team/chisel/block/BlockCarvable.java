@@ -14,7 +14,6 @@ import net.minecraft.world.IBlockAccess;
 import team.chisel.Chisel;
 import team.chisel.config.Configurations;
 
-
 import com.cricketcraft.chisel.api.ChiselTabs;
 import com.cricketcraft.chisel.api.ICarvable;
 import com.cricketcraft.chisel.api.carving.CarvableHelper;
@@ -105,7 +104,7 @@ public class BlockCarvable extends Block implements ICarvable {
 
         /**
          * Creates a SoundType with automatic names for step and break sounds. Sound names dig.soundName and
-         * step.soundName must be specified in the sounds.json         
+         * step.soundName must be specified in the sounds.json
          * 
          * @param soundName block of the sound. Will automatically be expanded to "mod:dig.soundName" and
          *                  "mod:step.soundName" respectively)
