@@ -24,8 +24,6 @@ public class ItemCarvable extends ItemBlock {
         setHasSubtypes(true);
     }
 
-    private static final boolean canMobsSpawnOnTheChiselBlocks = Configurations.canMobsSpawnOnTheChiselBlocks;
-
     @Override
     public int getMetadata(int i) {
         return i;
@@ -53,7 +51,7 @@ public class ItemCarvable extends ItemBlock {
 
         lines.add(var.getDescription());
 
-        if (!canMobsSpawnOnTheChiselBlocks)
+        if (!Configurations.canMobsSpawnOnTheChiselBlocks)
             lines.add(StatCollector.translateToLocal("item.chisel.nomobspawnsonthisblock.desc"));
     }
 }

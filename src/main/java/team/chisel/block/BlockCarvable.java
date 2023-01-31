@@ -27,7 +27,6 @@ public class BlockCarvable extends Block implements ICarvable {
 
     public CarvableHelper carverHelper;
     private boolean isAlpha;
-    private static final boolean canMobsSpawnOnTheChiselBlocks = Configurations.canMobsSpawnOnTheChiselBlocks;
 
     public BlockCarvable() {
         this(Material.rock);
@@ -174,6 +173,6 @@ public class BlockCarvable extends Block implements ICarvable {
 
     @Override
     public boolean canCreatureSpawn(EnumCreatureType type, IBlockAccess world, int x, int y, int z) {
-        return canMobsSpawnOnTheChiselBlocks;
+        return Configurations.canMobsSpawnOnTheChiselBlocks;
     }
 }
