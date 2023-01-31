@@ -4,13 +4,13 @@ import team.chisel.Chisel;
 
 public class BlockEldritch extends BlockCarvable {
 
-	public BlockEldritch() {
-		super();
-	}
+    public BlockEldritch() {
+        super();
+    }
 
-	@Override
-	public int getRenderType() {
-		return Chisel.renderEldritchId;
-	}
+    @Override
+    public int getRenderType() {
+        return Chisel.renderEldritchId;
+    }
 
 }

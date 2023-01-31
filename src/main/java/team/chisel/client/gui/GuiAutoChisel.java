@@ -18,66 +18,74 @@ import com.google.common.collect.Lists;
 
 public class GuiAutoChisel extends GuiContainer {
 
-	private static final ResourceLocation gui = new ResourceLocation("chisel:textures/autochisel-gui.png");
+    private static final ResourceLocation gui = new ResourceLocation("chisel:textures/autochisel-gui.png");
 
-	private TileEntityAutoChisel autochisel;
+    private TileEntityAutoChisel autochisel;
 
-	public GuiAutoChisel(InventoryPlayer inventoryPlayer, TileEntityAutoChisel tileEntityAutoChisel) {
-		super(new ContainerAutoChisel(inventoryPlayer, tileEntityAutoChisel));
-		autochisel = tileEntityAutoChisel;
-	}
+    public GuiAutoChisel(InventoryPlayer inventoryPlayer, TileEntityAutoChisel tileEntityAutoChisel) {
+        super(new ContainerAutoChisel(inventoryPlayer, tileEntityAutoChisel));
+        autochisel = tileEntityAutoChisel;
+    }
 
-	@Override
-	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
-	}
-	
-	@SuppressWarnings("unchecked")
-	@Override
-	public void drawScreen(int mouseX, int mouseY, float partialTick) {
-		super.drawScreen(mouseX, mouseY, partialTick);
+    @Override
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+        super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+    }
 
-		int x = (this.width - this.xSize) / 2;
-		int y = (this.height - this.ySize) / 2;
+    @SuppressWarnings("unchecked")
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTick) {
+        super.drawScreen(mouseX, mouseY, partialTick);
 
-		for (Slot slot : (List<Slot>) inventorySlots.inventorySlots) {
-			if (!slot.getHasStack() && mouseInside(slot, mouseX - x, mouseY - y)) {
-				if (slot.slotNumber < autochisel.getSizeInventory()) {
-					String tt = autochisel.getSlotTooltipUnloc(slot.slotNumber);
-					if (!Strings.isNullOrEmpty(tt)) {
-						this.func_146283_a(Lists.newArrayList(tt), mouseX, mouseY);
-					}
-				}
-			}
-		}
-		RenderHelper.enableGUIStandardItemLighting();
-	}
+        int x = (this.width - this.xSize) / 2;
+        int y = (this.height - this.ySize) / 2;
 
-	private boolean mouseInside(Slot slot, int x, int y) {
-		return x >= slot.xDisplayPosition && x <= slot.xDisplayPosition + 16 && y >= slot.yDisplayPosition && y <= slot.yDisplayPosition + 16;
-	}
+        for (Slot slot : (List<Slot>) inventorySlots.inventorySlots) {
+            if (!slot.getHasStack() && mouseInside(slot, mouseX - x, mouseY - y)) {
+                if (slot.slotNumber < autochisel.getSizeInventory()) {
+                    String tt = autochisel.getSlotTooltipUnloc(slot.slotNumber);
+                    if (!Strings.isNullOrEmpty(tt)) {
+                        this.func_146283_a(Lists.newArrayList(tt), mouseX, mouseY);
+                    }
+                }
+            }
+        }
+        RenderHelper.enableGUIStandardItemLighting();
+    }
 
-	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.mc.renderEngine.bindTexture(gui);
-		int x = (width - xSize) / 2;
-		int y = (height - ySize) / 2;
-		this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
+    private boolean mouseInside(Slot slot, int x, int y) {
+        return x >= slot.xDisplayPosition && x <= slot.xDisplayPosition + 16
+                && y >= slot.yDisplayPosition
+                && y <= slot.yDisplayPosition + 16;
+    }
 
-		for (int i = TileEntityAutoChisel.BASE; i < TileEntityAutoChisel.CHISEL; i++) {
-			if (autochisel.getStackInSlot(i) == null) {
-				drawSlotOverlay(this, x, y, inventorySlots.getSlot(i), xSize, 0, 8);
-			}
-		}
+    @Override
+    protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+        this.mc.renderEngine.bindTexture(gui);
+        int x = (width - xSize) / 2;
+        int y = (height - ySize) / 2;
+        this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
 
-		if (autochisel.getStackInSlot(TileEntityAutoChisel.CHISEL) == null) {
-			drawSlotOverlay(this, x, y, inventorySlots.getSlot(TileEntityAutoChisel.CHISEL), xSize, 24, 0);
-		}
-	}
+        for (int i = TileEntityAutoChisel.BASE; i < TileEntityAutoChisel.CHISEL; i++) {
+            if (autochisel.getStackInSlot(i) == null) {
+                drawSlotOverlay(this, x, y, inventorySlots.getSlot(i), xSize, 0, 8);
+            }
+        }
 
-	public static void drawSlotOverlay(GuiContainer gui, int x, int y, Slot slot, int u, int v, int padding) {
-		padding /= 2;
-		gui.drawTexturedModalRect(x + (slot.xDisplayPosition - padding), y + (slot.yDisplayPosition - padding), u, v, 18 + padding, 18 + padding);
-	}
+        if (autochisel.getStackInSlot(TileEntityAutoChisel.CHISEL) == null) {
+            drawSlotOverlay(this, x, y, inventorySlots.getSlot(TileEntityAutoChisel.CHISEL), xSize, 24, 0);
+        }
+    }
+
+    public static void drawSlotOverlay(GuiContainer gui, int x, int y, Slot slot, int u, int v, int padding) {
+        padding /= 2;
+        gui.drawTexturedModalRect(
+                x + (slot.xDisplayPosition - padding),
+                y + (slot.yDisplayPosition - padding),
+                u,
+                v,
+                18 + padding,
+                18 + padding);
+    }
 }

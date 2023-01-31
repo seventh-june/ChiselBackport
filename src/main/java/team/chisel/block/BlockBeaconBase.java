@@ -8,16 +8,16 @@ import net.minecraft.world.IBlockAccess;
  */
 public class BlockBeaconBase extends BlockCarvable {
 
-	public BlockBeaconBase() {
-		super();
-	}
+    public BlockBeaconBase() {
+        super();
+    }
 
-	public BlockBeaconBase(Material mat) {
-		super(mat);
-	}
+    public BlockBeaconBase(Material mat) {
+        super(mat);
+    }
 
-	@Override
-	public boolean isBeaconBase(IBlockAccess worldObj, int x, int y, int z, int beaconX, int beaconY, int beaconZ) {
-		return true;
-	}
+    @Override
+    public boolean isBeaconBase(IBlockAccess worldObj, int x, int y, int z, int beaconX, int beaconY, int beaconZ) {
+        return true;
+    }
 }
