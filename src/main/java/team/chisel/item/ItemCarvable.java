@@ -8,6 +8,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
+
+import team.chisel.config.Configurations;
+import team.chisel.utils.General;
+
+import com.cricketcraft.chisel.api.ICarvable;
+import com.cricketcraft.chisel.api.carving.IVariationInfo;
 
 import team.chisel.config.Configurations;
 import team.chisel.utils.General;
@@ -49,5 +56,8 @@ public class ItemCarvable extends ItemBlock {
         if (var == null) return;
 
         lines.add(var.getDescription());
+
+        if (!Configurations.canMobsSpawnOnTheChiselBlocks)
+            lines.add(StatCollector.translateToLocal("item.chisel.nomobspawnsonthisblock.desc"));
     }
 }

@@ -6,6 +6,8 @@ stat.blockChiseled=Blocks Chiseled
 #Entity localizations
 entity.chisel.snowman.name=Snow Golem
 
+item.chisel.nomobspawnsonthisblock.desc=Mobs cannot Spawn on this Block
+
 #Item localizations
 item.chisel.chisel_iron.name=Chisel
 

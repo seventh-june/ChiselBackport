@@ -6,6 +6,8 @@ stat.blockChiseled=Блоков обработано
 #Entity localizations
 entity.chisel.snowman.name=Снеговик
 
+item.chisel.nomobspawnsonthisblock.desc=Монстры не могут появляться на этом блоке
+
 #Item localizations
 item.chisel.chisel_iron.name=Стамеска
 

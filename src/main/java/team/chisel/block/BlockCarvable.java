@@ -6,11 +6,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
 import team.chisel.Chisel;
+import team.chisel.config.Configurations;
 
 import com.cricketcraft.chisel.api.ChiselTabs;
 import com.cricketcraft.chisel.api.ICarvable;
@@ -167,5 +169,10 @@ public class BlockCarvable extends Block implements ICarvable {
             if (soundNamePlace == null) return getBreakSound();
             else return this.soundNamePlace;
         }
+    }
+
+    @Override
+    public boolean canCreatureSpawn(EnumCreatureType type, IBlockAccess world, int x, int y, int z) {
+        return Configurations.canMobsSpawnOnTheChiselBlocks;
     }
 }
