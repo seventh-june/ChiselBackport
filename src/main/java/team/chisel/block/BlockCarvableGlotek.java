@@ -6,7 +6,7 @@ import net.minecraft.world.IBlockAccess;
 
 import com.cricketcraft.chisel.api.ICarvable;
 
-public class BlockCarvableGlotek extends BlockCarvable implements ICarvable {
+public class BlockCarvableGlotek extends BlockCarvable {
 
     public BlockCarvableGlotek() {
         super(Material.rock);

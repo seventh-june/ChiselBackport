@@ -6,7 +6,7 @@ import net.minecraft.world.IBlockAccess;
 
 import com.cricketcraft.chisel.api.ICarvable;
 
-public class BlockCarvableNeonite extends BlockCarvable implements ICarvable {
+public class BlockCarvableNeonite extends BlockCarvable {
 
     public BlockCarvableNeonite() {
         super(Material.rock);

@@ -837,27 +837,16 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable cubit = (BlockCarvable) new BlockCarvable(Material.rock)
-                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
-                    .setStepSound(Block.soundTypeStone);
+                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
+                .setStepSound(Block.soundTypeStone);
 
-            cubit.carverHelper.addVariation("tile.cubit.0.desc", 0, "cubit/0");
-            cubit.carverHelper.addVariation("tile.cubit.1.desc", 1, "cubit/1");
-            cubit.carverHelper.addVariation("tile.cubit.2.desc", 2, "cubit/2");
-            cubit.carverHelper.addVariation("tile.cubit.3.desc", 3, "cubit/3");
-            cubit.carverHelper.addVariation("tile.cubit.4.desc", 4, "cubit/4");
-            cubit.carverHelper.addVariation("tile.cubit.5.desc", 5, "cubit/5");
-            cubit.carverHelper.addVariation("tile.cubit.6.desc", 6, "cubit/6");
-            cubit.carverHelper.addVariation("tile.cubit.7.desc", 7, "cubit/7");
-            cubit.carverHelper.addVariation("tile.cubit.8.desc", 8, "cubit/8");
-            cubit.carverHelper.addVariation("tile.cubit.9.desc", 9, "cubit/9");
-            cubit.carverHelper.addVariation("tile.cubit.10.desc", 10, "cubit/10");
-            cubit.carverHelper.addVariation("tile.cubit.11.desc", 11, "cubit/11");
-            cubit.carverHelper.addVariation("tile.cubit.12.desc", 12, "cubit/12");
-            cubit.carverHelper.addVariation("tile.cubit.13.desc", 13, "cubit/13");
-            cubit.carverHelper.addVariation("tile.cubit.14.desc", 14, "cubit/14");
-            cubit.carverHelper.addVariation("tile.cubit.15.desc", 15, "cubit/15");
+            for (int i = 0; i < 16; i++) {
+                cubit.carverHelper.addVariation("tile.cubit." + i + ".desc", i, "cubit/" + i);
+            }
+
             cubit.carverHelper.registerAll(cubit, "cubit");
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
@@ -871,6 +860,7 @@ public enum Features {
                 new ItemStack(Blocks.wool, 1, 15));
         }
     },
+
 
     DIAMOND_BLOCK {
 
@@ -1602,63 +1592,40 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable hempcrete = (BlockCarvable) new BlockCarvable(Material.rock)
-                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
-                    .setStepSound(Block.soundTypeStone);
+                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
+                .setStepSound(Block.soundTypeStone);
 
-            hempcrete.carverHelper.addVariation("tile.hempcrete.0.desc", 0, "hempCrete/concrete/black");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.1.desc", 1, "hempCrete/concrete/gray");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.2.desc", 2, "hempCrete/concrete/silver");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.3.desc", 3, "hempCrete/concrete/white");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.4.desc", 4, "hempCrete/concrete/lightblue");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.5.desc", 5, "hempCrete/concrete/cyan");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.6.desc", 6, "hempCrete/concrete/blue");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.7.desc", 7, "hempCrete/concrete/purple");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.8.desc", 8, "hempCrete/concrete/magenta");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.9.desc", 9, "hempCrete/concrete/pink");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.10.desc", 10, "hempCrete/concrete/red");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.11.desc", 11, "hempCrete/concrete/orange");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.12.desc", 12, "hempCrete/concrete/yellow");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.13.desc", 13, "hempCrete/concrete/lime");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.14.desc", 14, "hempCrete/concrete/green");
-            hempcrete.carverHelper.addVariation("tile.hempcrete.15.desc", 15, "hempCrete/concrete/brown");
+            for (int i = 0; i < 16; i++) hempcrete.carverHelper.addVariation(
+                "tile.hempcrete." + i + ".desc",
+                i,
+                "hempCrete/concrete/" + sGNames[i].replaceAll(" ", "").toLowerCase());
             hempcrete.carverHelper.registerAll(hempcrete, "hempcrete");
-
         }
         @Override
         void addRecipes() {
             for (int i = 0; i < 16; i++) {
-                GameRegistry.addSmelting(new ItemStack(ChiselBlocks.hempcretesand, 1, i), new ItemStack(ChiselBlocks.hempcrete, 1, i), 0.1F);
+                GameRegistry.addSmelting(new ItemStack(ChiselBlocks.hempcretesand, 1, i), new ItemStack(ChiselBlocks.hempcrete, 1, i), 20F);
             }
         }
     },
 
-    hempcreteSand {
+    Hempcrete_Sand {
 
         @Override
         void addBlocks() {
-            BlockHempcreteSand hempcretesand = (BlockHempcreteSand) new BlockHempcreteSand()
-                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.5F).setResistance(0.5F)
-                    .setStepSound(Block.soundTypeSand);
+            BlockCarvableSand hempcretesand = (BlockCarvableSand) new BlockCarvableSand()
+                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.5F).setResistance(0.5F)
+                .setStepSound(Block.soundTypeSand);
 
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.0.desc", 0, "hempCrete/sand/black");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.1.desc", 1, "hempCrete/sand/gray");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.2.desc", 2, "hempCrete/sand/silver");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.3.desc", 3, "hempCrete/sand/white");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.4.desc", 4, "hempCrete/sand/lightblue");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.5.desc", 5, "hempCrete/sand/cyan");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.6.desc", 6, "hempCrete/sand/blue");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.7.desc", 7, "hempCrete/sand/purple");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.8.desc", 8, "hempCrete/sand/magenta");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.9.desc", 9, "hempCrete/sand/pink");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.10.desc", 10, "hempCrete/sand/red");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.11.desc", 11, "hempCrete/sand/orange");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.12.desc", 12, "hempCrete/sand/yellow");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.13.desc", 13, "hempCrete/sand/lime");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.14.desc", 14, "hempCrete/sand/green");
-            hempcretesand.carverHelper.addVariation("tile.hempcretesand.15.desc", 15, "hempCrete/sand/brown");
+            for (int i = 0; i < 16; i++) {
+                hempcretesand.carverHelper.addVariation(
+                    "tile.hempcretesand." + i + ".desc",
+                    i,
+                    "hempCrete/sand/" + sGNames[i].replaceAll(" ", "").toLowerCase());
+            }
+
             hempcretesand.carverHelper.registerAll(hempcretesand, "hempcretesand");
             OreDictionary.registerOre("hempcretesand", hempcretesand);
-
         }
         @Override
         void addRecipes() {
@@ -3375,28 +3342,16 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable svelstone = (BlockCarvable) new BlockCarvable(Material.rock)
-                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(5.0F).setResistance(10.0F)
-                    .setStepSound(Block.soundTypeStone);
+                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(5.0F).setResistance(10.0F)
+                .setStepSound(Block.soundTypeStone);
 
-            svelstone.carverHelper.addVariation("tile.sveltstone.0.desc", 0, "sveltstone/0");
-            svelstone.carverHelper.addVariation("tile.sveltstone.1.desc", 1, "sveltstone/1");
-            svelstone.carverHelper.addVariation("tile.sveltstone.2.desc", 2, "sveltstone/2");
-            svelstone.carverHelper.addVariation("tile.sveltstone.3.desc", 3, "sveltstone/3");
-            svelstone.carverHelper.addVariation("tile.sveltstone.4.desc", 4, "sveltstone/4");
-            svelstone.carverHelper.addVariation("tile.sveltstone.5.desc", 5, "sveltstone/5");
-            svelstone.carverHelper.addVariation("tile.sveltstone.6.desc", 6, "sveltstone/6");
-            svelstone.carverHelper.addVariation("tile.sveltstone.7.desc", 7, "sveltstone/7");
-            svelstone.carverHelper.addVariation("tile.sveltstone.8.desc", 8, "sveltstone/8");
-            svelstone.carverHelper.addVariation("tile.sveltstone.9.desc", 9, "sveltstone/9");
-            svelstone.carverHelper.addVariation("tile.sveltstone.10.desc", 10, "sveltstone/10");
-            svelstone.carverHelper.addVariation("tile.sveltstone.11.desc", 11, "sveltstone/11");
-            svelstone.carverHelper.addVariation("tile.sveltstone.12.desc", 12, "sveltstone/12");
-            svelstone.carverHelper.addVariation("tile.sveltstone.13.desc", 13, "sveltstone/13");
-            svelstone.carverHelper.addVariation("tile.sveltstone.14.desc", 14, "sveltstone/14");
-            svelstone.carverHelper.addVariation("tile.sveltstone.15.desc", 15, "sveltstone/15");
+            for (int i = 0; i < 16; i++) {
+                svelstone.carverHelper.addVariation("tile.sveltstone." + i + ".desc", i, "sveltstone/" + i);
+            }
+
             svelstone.carverHelper.registerAll(svelstone, "sveltstone");
-
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
@@ -3410,6 +3365,7 @@ public enum Features {
                 new ItemStack(ChiselBlocks.andesite, 1));
         }
     },
+
 
     TALLOW("Thaumcraft") {
 
