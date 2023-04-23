@@ -16,9 +16,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockRoadLine extends BlockCarvable {
 
-    public IIcon aloneIcon[] = new IIcon[4];
-    public IIcon halfLineIcon[] = new IIcon[4];
-    public IIcon fullLineIcon[] = new IIcon[4];
+    public IIcon aloneIcon[] = new IIcon[5];
+    public IIcon halfLineIcon[] = new IIcon[5];
+    public IIcon fullLineIcon[] = new IIcon[5];
 
     public BlockRoadLine() {
         super(Material.circuits);
@@ -71,8 +71,8 @@ public class BlockRoadLine extends BlockCarvable {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister reg) {
-        for (int i = 0; i < 4; i++) {
-            String[] texNames = { "white", "yellow", "double-white", "double-yellow" };
+        for (int i = 0; i < 5; i++) {
+            String[] texNames = { "white", "yellow", "double-white", "double-yellow", "warning" };
             aloneIcon[i] = reg.registerIcon("Chisel:line-marking/" + texNames[i] + "-center");
             halfLineIcon[i] = reg.registerIcon("Chisel:line-marking/" + texNames[i] + "-side");
             fullLineIcon[i] = reg.registerIcon("Chisel:line-marking/" + texNames[i] + "-long");
