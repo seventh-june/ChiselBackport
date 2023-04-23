@@ -858,17 +858,18 @@ public enum Features {
             cubit.carverHelper.addVariation("tile.cubit.15.desc", 15, "cubit/15");
             cubit.carverHelper.registerAll(cubit, "cubit");
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(cubit, 8, 0),
-                "***",
-                "*X*",
-                "***",
-                '*',
-                new ItemStack(Blocks.stone, 1),
-                'X',
-                new ItemStack(Blocks.wool, 1, 15));
+                    new ItemStack(cubit, 8, 0),
+                    "***",
+                    "*X*",
+                    "***",
+                    '*',
+                    new ItemStack(Blocks.stone, 1),
+                    'X',
+                    new ItemStack(Blocks.wool, 1, 15));
         }
     },
 
@@ -1362,17 +1363,18 @@ public enum Features {
             glotek.carverHelper.registerAll(glotek, "glotek");
             OreDictionary.registerOre("glotek", glotek);
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(ChiselBlocks.glotek, 8, 0),
-                "***",
-                "*X*",
-                "***",
-                '*',
-                new ItemStack(neonite, 1),
-                'X',
-                new ItemStack(Items.glowstone_dust, 1));
+                    new ItemStack(ChiselBlocks.glotek, 8, 0),
+                    "***",
+                    "*X*",
+                    "***",
+                    '*',
+                    new ItemStack(neonite, 1),
+                    'X',
+                    new ItemStack(Items.glowstone_dust, 1));
         }
     },
     GLOWSTONE {
@@ -1624,10 +1626,14 @@ public enum Features {
             hempcrete.carverHelper.registerAll(hempcrete, "hempcrete");
 
         }
+
         @Override
         void addRecipes() {
             for (int i = 0; i < 16; i++) {
-                GameRegistry.addSmelting(new ItemStack(ChiselBlocks.hempcretesand, 1, i), new ItemStack(ChiselBlocks.hempcrete, 1, i), 0.1F);
+                GameRegistry.addSmelting(
+                        new ItemStack(ChiselBlocks.hempcretesand, 1, i),
+                        new ItemStack(ChiselBlocks.hempcrete, 1, i),
+                        0.1F);
             }
         }
     },
@@ -1660,17 +1666,18 @@ public enum Features {
             OreDictionary.registerOre("hempcretesand", hempcretesand);
 
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(ChiselBlocks.hempcretesand, 8, 0),
-                "***",
-                "*X*",
-                "***",
-                '*',
-                new ItemStack(Blocks.sand, 1),
-                'X',
-                new ItemStack(Blocks.tallgrass, 1,2));
+                    new ItemStack(ChiselBlocks.hempcretesand, 8, 0),
+                    "***",
+                    "*X*",
+                    "***",
+                    '*',
+                    new ItemStack(Blocks.sand, 1),
+                    'X',
+                    new ItemStack(Blocks.tallgrass, 1, 2));
         }
     },
 
@@ -2497,17 +2504,18 @@ public enum Features {
             neonite.carverHelper.registerAll(neonite, "neonite");
             OreDictionary.registerOre("neonite", neonite);
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(neonite, 8, 0),
-                "***",
-                "*X*",
-                "***",
-                '*',
-                new ItemStack(Items.emerald, 1),
-                'X',
-                new ItemStack(Items.glowstone_dust, 1));
+                    new ItemStack(neonite, 8, 0),
+                    "***",
+                    "*X*",
+                    "***",
+                    '*',
+                    new ItemStack(Items.emerald, 1),
+                    'X',
+                    new ItemStack(Items.glowstone_dust, 1));
         }
     },
 
@@ -2612,19 +2620,20 @@ public enum Features {
             nucrete.carverHelper.registerAll(nucrete, "nucrete");
 
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(nucrete, 8, 0),
-                "XYX",
-                "*X*",
-                "XYX",
-                '*',
-                new ItemStack(Blocks.sand, 1),
-                'X',
-                new ItemStack(Blocks.gravel, 1),
-                'Y',
-                new ItemStack(Items.clay_ball, 1));
+                    new ItemStack(nucrete, 8, 0),
+                    "XYX",
+                    "*X*",
+                    "XYX",
+                    '*',
+                    new ItemStack(Blocks.sand, 1),
+                    'X',
+                    new ItemStack(Blocks.gravel, 1),
+                    'Y',
+                    new ItemStack(Items.clay_ball, 1));
         }
     },
 
@@ -3397,17 +3406,18 @@ public enum Features {
             svelstone.carverHelper.registerAll(svelstone, "sveltstone");
 
         }
+
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(sveltstone, 8, 0),
-                "***",
-                "*X*",
-                "***",
-                '*',
-                new ItemStack(Blocks.stone, 1),
-                'X',
-                new ItemStack(ChiselBlocks.andesite, 1));
+                    new ItemStack(sveltstone, 8, 0),
+                    "***",
+                    "*X*",
+                    "***",
+                    '*',
+                    new ItemStack(Blocks.stone, 1),
+                    'X',
+                    new ItemStack(ChiselBlocks.andesite, 1));
         }
     },
 
