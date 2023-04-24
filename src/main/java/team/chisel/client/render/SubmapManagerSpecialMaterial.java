@@ -8,6 +8,8 @@ import net.minecraft.world.IBlockAccess;
 
 import team.chisel.ctmlib.RenderBlocksCTM;
 import team.chisel.ctmlib.TextureSubmap;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class SubmapManagerSpecialMaterial extends SubmapManagerBase {
 
@@ -63,6 +65,7 @@ public class SubmapManagerSpecialMaterial extends SubmapManagerBase {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void registerIcons(String modName, Block block, IIconRegister register) {
         String materialName = materialType.name().toLowerCase();
         submap = new TextureSubmap(register.registerIcon(modName + ":" + materialName + "/" + color + "-ctm"), 4, 4);
@@ -70,6 +73,7 @@ public class SubmapManagerSpecialMaterial extends SubmapManagerBase {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public RenderBlocks createRenderContext(RenderBlocks rendererOld, Block block, IBlockAccess world) {
         if (renderBlocksFullbright == null) {
             renderBlocksFullbright = new RenderBlocksCTMFullbright();
