@@ -20,7 +20,6 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import team.chisel.block.*;
-import team.chisel.block.BlockCarvableNeonite;
 import team.chisel.carving.Carving;
 import team.chisel.client.render.*;
 import team.chisel.client.render.SubmapManagerSpecialMaterial;
@@ -1337,7 +1336,7 @@ public enum Features {
 
         @Override
         void addBlocks() {
-            BlockCarvable glotek = (BlockCarvable) new BlockCarvableGlotek()
+            BlockCarvable glotek = (BlockCarvable) new BlockCarvableGlowie(Material.rock)
                     .setCreativeTab(ChiselTabs.tabOtherChiselBlocks);
 
             if (!Configurations.allowChiselCrossColors) {
@@ -2467,7 +2466,7 @@ public enum Features {
 
         @Override
         void addBlocks() {
-            BlockCarvable neonite = (BlockCarvable) new BlockCarvableNeonite()
+            BlockCarvable neonite = (BlockCarvable) new BlockCarvableGlowie(Material.rock)
                     .setCreativeTab(ChiselTabs.tabOtherChiselBlocks);
 
             if (!Configurations.allowChiselCrossColors) {

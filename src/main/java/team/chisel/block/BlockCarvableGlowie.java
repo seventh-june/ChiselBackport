@@ -4,10 +4,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockCarvableNeonite extends BlockCarvable {
+public class BlockCarvableGlowie extends BlockCarvable {
 
-    public BlockCarvableNeonite() {
-        super(Material.rock);
+    public BlockCarvableGlowie(Material material) {
+        super(material);
     }
 
     @Override
