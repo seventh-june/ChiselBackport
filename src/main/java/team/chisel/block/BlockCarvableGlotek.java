@@ -4,8 +4,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.IBlockAccess;
 
-import com.cricketcraft.chisel.api.ICarvable;
-
 public class BlockCarvableGlotek extends BlockCarvable {
 
     public BlockCarvableGlotek() {

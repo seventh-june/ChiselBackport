@@ -111,8 +111,6 @@ public final class ChiselBlocks {
 
     public static final BlockCarvable hempcrete = null;
 
-
-
     public static final BlockCarvable sveltstone = null;
     public static final BlockCarvable cubit = null;
 

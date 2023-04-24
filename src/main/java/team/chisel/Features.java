@@ -23,6 +23,7 @@ import team.chisel.block.*;
 import team.chisel.block.BlockCarvableNeonite;
 import team.chisel.carving.Carving;
 import team.chisel.client.render.*;
+import team.chisel.client.render.SubmapManagerSpecialMaterial;
 import team.chisel.compat.fmp.ItemBlockChiselTorchPart;
 import team.chisel.config.Configurations;
 import team.chisel.entity.EntityBallOMoss;
@@ -837,8 +838,8 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable cubit = (BlockCarvable) new BlockCarvable(Material.rock)
-                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
-                .setStepSound(Block.soundTypeStone);
+                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
+                    .setStepSound(Block.soundTypeStone);
 
             for (int i = 0; i < 16; i++) {
                 cubit.carverHelper.addVariation("tile.cubit." + i + ".desc", i, "cubit/" + i);
@@ -860,7 +861,6 @@ public enum Features {
                     new ItemStack(Blocks.wool, 1, 15));
         }
     },
-
 
     DIAMOND_BLOCK {
 
@@ -1345,8 +1345,12 @@ public enum Features {
             }
 
             for (int i = 0; i < 16; i++) {
-                glotek.carverHelper
-                        .addVariation("tile.glotek." + i + ".desc", i, new SubmapManagerGlotek(String.valueOf(i)));
+                glotek.carverHelper.addVariation(
+                        "tile.glotek." + i + ".desc",
+                        i,
+                        new SubmapManagerSpecialMaterial(
+                                String.valueOf(i),
+                                SubmapManagerSpecialMaterial.MaterialType.GLOTEK));
             }
 
             glotek.carverHelper.registerAll(glotek, "glotek");
@@ -1366,6 +1370,7 @@ public enum Features {
                     new ItemStack(Items.glowstone_dust, 1));
         }
     },
+
     GLOWSTONE {
 
         @Override
@@ -1593,13 +1598,13 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable hempcrete = (BlockCarvable) new BlockCarvable(Material.rock)
-                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
-                .setStepSound(Block.soundTypeStone);
+                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.8F).setResistance(10.0F)
+                    .setStepSound(Block.soundTypeStone);
 
             for (int i = 0; i < 16; i++) hempcrete.carverHelper.addVariation(
-                "tile.hempcrete." + i + ".desc",
-                i,
-                "hempCrete/concrete/" + sGNames[i].replaceAll(" ", "").toLowerCase());
+                    "tile.hempcrete." + i + ".desc",
+                    i,
+                    "hempCrete/concrete/" + sGNames[i].replaceAll(" ", "").toLowerCase());
             hempcrete.carverHelper.registerAll(hempcrete, "hempcrete");
         }
 
@@ -1607,7 +1612,10 @@ public enum Features {
         void addRecipes() {
             for (int i = 0; i < 16; i++) {
 
-                GameRegistry.addSmelting(new ItemStack(ChiselBlocks.hempcretesand, 1, i), new ItemStack(ChiselBlocks.hempcrete, 1, i), 20F);
+                GameRegistry.addSmelting(
+                        new ItemStack(ChiselBlocks.hempcretesand, 1, i),
+                        new ItemStack(ChiselBlocks.hempcrete, 1, i),
+                        20F);
 
                 GameRegistry.addSmelting(
                         new ItemStack(ChiselBlocks.hempcretesand, 1, i),
@@ -1623,14 +1631,14 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvableSand hempcretesand = (BlockCarvableSand) new BlockCarvableSand()
-                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.5F).setResistance(0.5F)
-                .setStepSound(Block.soundTypeSand);
+                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(0.5F).setResistance(0.5F)
+                    .setStepSound(Block.soundTypeSand);
 
             for (int i = 0; i < 16; i++) {
                 hempcretesand.carverHelper.addVariation(
-                    "tile.hempcretesand." + i + ".desc",
-                    i,
-                    "hempCrete/sand/" + sGNames[i].replaceAll(" ", "").toLowerCase());
+                        "tile.hempcretesand." + i + ".desc",
+                        i,
+                        "hempCrete/sand/" + sGNames[i].replaceAll(" ", "").toLowerCase());
             }
 
             hempcretesand.carverHelper.registerAll(hempcretesand, "hempcretesand");
@@ -2467,8 +2475,13 @@ public enum Features {
             }
 
             for (int i = 0; i < 16; i++) {
-                neonite.carverHelper
-                        .addVariation("tile.neonite." + i + ".desc", i, new SubmapManagerNeonite(String.valueOf(i)));
+                neonite.carverHelper.addVariation(
+                        "tile.neonite." + i + ".desc",
+                        i,
+                        new SubmapManagerSpecialMaterial(
+                                String.valueOf(i),
+                                SubmapManagerSpecialMaterial.MaterialType.NEONITE));
+
             }
 
             neonite.carverHelper.registerAll(neonite, "neonite");
@@ -3354,8 +3367,8 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable svelstone = (BlockCarvable) new BlockCarvable(Material.rock)
-                .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(5.0F).setResistance(10.0F)
-                .setStepSound(Block.soundTypeStone);
+                    .setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setHardness(5.0F).setResistance(10.0F)
+                    .setStepSound(Block.soundTypeStone);
 
             for (int i = 0; i < 16; i++) {
                 svelstone.carverHelper.addVariation("tile.sveltstone." + i + ".desc", i, "sveltstone/" + i);
@@ -3377,7 +3390,6 @@ public enum Features {
                     new ItemStack(ChiselBlocks.andesite, 1));
         }
     },
-
 
     TALLOW("Thaumcraft") {
 

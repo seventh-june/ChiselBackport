@@ -8,24 +8,26 @@ import net.minecraft.world.IBlockAccess;
 
 import team.chisel.ctmlib.RenderBlocksCTM;
 import team.chisel.ctmlib.TextureSubmap;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class SubmapManagerGlotek extends SubmapManagerBase {
+public class SubmapManagerSpecialMaterial extends SubmapManagerBase {
 
-    @SideOnly(Side.CLIENT)
+    public enum MaterialType {
+        NEONITE,
+        GLOTEK
+    }
+
     private static class RenderBlocksCTMFullbright extends RenderBlocksCTM {
 
         @Override
         protected void fillLightmap(int bottomLeft, int bottomRight, int topRight, int topLeft) {
-            ao();
+            enableAmbientOcclusionIfInWorld();
             int maxLight = 0xF000F0;
             super.fillLightmap(maxLight, maxLight, maxLight, maxLight);
         }
 
         @Override
         protected void fillColormap(float bottomLeft, float bottomRight, float topRight, float topLeft, float[][] map) {
-            ao();
+            enableAmbientOcclusionIfInWorld();
             int color = 0xFFFFFF;
             super.fillColormap(color, color, color, color, map);
         }
@@ -37,21 +39,22 @@ public class SubmapManagerGlotek extends SubmapManagerBase {
             return ret;
         }
 
-        private void ao() {
+        private void enableAmbientOcclusionIfInWorld() {
             if (this.inWorld) {
                 this.enableAO = true;
             }
         }
     };
 
-    @SideOnly(Side.CLIENT)
-    private static RenderBlocksCTMFullbright rb;
+    private static RenderBlocksCTMFullbright renderBlocksFullbright;
 
     private String color;
+    private MaterialType materialType;
     private TextureSubmap submap, submapSmall;
 
-    public SubmapManagerGlotek(String color) {
+    public SubmapManagerSpecialMaterial(String color, MaterialType materialType) {
         this.color = color;
+        this.materialType = materialType;
     }
 
     @Override
@@ -60,21 +63,20 @@ public class SubmapManagerGlotek extends SubmapManagerBase {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public void registerIcons(String modName, Block block, IIconRegister register) {
-        submap = new TextureSubmap(register.registerIcon(modName + ":Glotek/" + color + "-ctm"), 4, 4);
-        submapSmall = new TextureSubmap(register.registerIcon(modName + ":Glotek/" + color), 2, 2);
+        String materialName = materialType.name().toLowerCase();
+        submap = new TextureSubmap(register.registerIcon(modName + ":" + materialName + "/" + color + "-ctm"), 4, 4);
+        submapSmall = new TextureSubmap(register.registerIcon(modName + ":" + materialName + "/" + color), 2, 2);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public RenderBlocks createRenderContext(RenderBlocks rendererOld, Block block, IBlockAccess world) {
-        if (rb == null) {
-            rb = new RenderBlocksCTMFullbright();
+        if (renderBlocksFullbright == null) {
+            renderBlocksFullbright = new RenderBlocksCTMFullbright();
         }
-        rb.setRenderBoundsFromBlock(block);
-        rb.submap = submap;
-        rb.submapSmall = submapSmall;
-        return rb;
+        renderBlocksFullbright.setRenderBoundsFromBlock(block);
+        renderBlocksFullbright.submap = submap;
+        renderBlocksFullbright.submapSmall = submapSmall;
+        return renderBlocksFullbright;
     }
 }
