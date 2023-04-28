@@ -104,8 +104,8 @@ public final class ChiselBlocks {
     // Holidays
     public static final BlockCarvable valentines = null;
     public static final BlockPresent present = null;
-	
-	// Jimbno additions
+
+    // Jimbno additions
     public static final BlockCarvableSand hempcretesand = null;
     public static final BlockCarvable nucrete = null;
     public static final BlockCarvable neonite = null;
