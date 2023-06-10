@@ -1654,7 +1654,7 @@ public enum Features {
                     '*',
                     new ItemStack(Blocks.sand, 1),
                     'X',
-                    new ItemStack(Blocks.tallgrass, 1, 2));
+                    new ItemStack(Items.wheat, 1, 2));
         }
     },
 
