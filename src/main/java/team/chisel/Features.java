@@ -1646,15 +1646,17 @@ public enum Features {
 
         @Override
         void addRecipes() {
-            GameRegistry.addRecipe(
-                    new ItemStack(ChiselBlocks.hempcretesand, 8, 0),
-                    "***",
-                    "*X*",
-                    "***",
-                    '*',
-                    new ItemStack(Blocks.sand, 1),
-                    'X',
-                    new ItemStack(Blocks.tallgrass, 1, 2));
+            if (!Loader.isModLoaded("dreamcraft")) {
+                GameRegistry.addRecipe(
+                        new ItemStack(ChiselBlocks.hempcretesand, 8, 0),
+                        "***",
+                        "*X*",
+                        "***",
+                        '*',
+                        new ItemStack(Blocks.sand, 1),
+                        'X',
+                        new ItemStack(Blocks.tallgrass, 1, 2));
+            }
         }
     },
 
