@@ -1609,18 +1609,19 @@ public enum Features {
 
         @Override
         void addRecipes() {
-            for (int i = 0; i < 16; i++) {
+            if (!Loader.isModLoaded("dreamcraft")) {
+                for (int i = 0; i < 16; i++) {
 
-                GameRegistry.addSmelting(
-                        new ItemStack(ChiselBlocks.hempcretesand, 1, i),
-                        new ItemStack(ChiselBlocks.hempcrete, 1, i),
-                        20F);
+                    GameRegistry.addSmelting(
+                            new ItemStack(ChiselBlocks.hempcretesand, 1, i),
+                            new ItemStack(ChiselBlocks.hempcrete, 1, i),
+                            20F);
 
-                GameRegistry.addSmelting(
-                        new ItemStack(ChiselBlocks.hempcretesand, 1, i),
-                        new ItemStack(ChiselBlocks.hempcrete, 1, i),
-                        0.1F);
-
+                    GameRegistry.addSmelting(
+                            new ItemStack(ChiselBlocks.hempcretesand, 1, i),
+                            new ItemStack(ChiselBlocks.hempcrete, 1, i),
+                            0.1F);
+                }
             }
         }
     },
