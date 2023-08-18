@@ -159,4 +159,12 @@ public class ItemChisel extends Item implements IChiselItem {
                 || type == ChiselType.NETHERSTAR
                 || Configurations.ironChiselHasModes;
     }
+
+    @Override
+    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
+        if (!world.isRemote && canOpenGui(world, player, itemStack)) {
+            ChiselController.INSTANCE.openQueue.add(new ChiselController.GuiOpen(player, itemStack));
+        }
+        return itemStack;
+    }
 }
