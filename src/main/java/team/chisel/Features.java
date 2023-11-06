@@ -181,7 +181,7 @@ public enum Features {
 
         @Override
         void addBlocks() {
-            BlockCarvable antiBlock = (BlockCarvable) new BlockCarvableAntiBlock()
+            BlockCarvable antiBlock = (BlockCarvable) new BlockCarvableGlowie(Material.rock)
                 .setCreativeTab(ChiselTabs.tabOtherChiselBlocks);
 
             if (!Configurations.allowChiselCrossColors) {

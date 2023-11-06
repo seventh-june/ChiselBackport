@@ -19,10 +19,13 @@ import com.cricketcraft.chisel.api.ChiselAPIProps;
 import com.cricketcraft.chisel.api.FMPIMC;
 import com.cricketcraft.chisel.api.rendering.TextureType;
 
+import codechicken.microblock.MicroMaterialRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import team.chisel.block.BlockCarvableGlowie;
+import team.chisel.client.render.FullBrightMicroMaterial;
 import team.chisel.ctmlib.ISubmapManager;
 
 public class CarvableHelper {
@@ -187,11 +190,21 @@ public class CarvableHelper {
         Block block = info.getVariation()
             .getBlock();
 
-        if (block.renderAsNormalBlock() || block.isOpaqueCube() || block.isNormalCube()) {
-            FMPIMC.registerFMP(
-                block,
-                info.getVariation()
-                    .getBlockMeta());
+        if (block instanceof BlockCarvableGlowie) {
+            int meta = info.getVariation()
+                .getBlockMeta();
+
+            MicroMaterialRegistry.registerMaterial(
+                new FullBrightMicroMaterial(block, meta),
+                block.getUnlocalizedName() + ((meta > 0) ? ("_" + meta) : ""));
+
+        } else {
+            if (block.renderAsNormalBlock() || block.isOpaqueCube() || block.isNormalCube()) {
+                FMPIMC.registerFMP(
+                    block,
+                    info.getVariation()
+                        .getBlockMeta());
+            }
         }
 
         if (forbidChiseling) return;
