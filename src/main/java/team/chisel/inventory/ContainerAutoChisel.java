@@ -118,7 +118,7 @@ public class ContainerAutoChisel extends Container {
 
     /**
      * Added validation of slot input
-     * 
+     *
      * @author CrazyPants
      */
     @Override

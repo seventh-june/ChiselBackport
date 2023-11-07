@@ -14,7 +14,7 @@ public class CarvingUtils {
     /**
      * A simple way to compare two {@link ICarvingVariation} objects based on the {@link ICarvingVariation#getOrder()
      * getOrder()} method.
-     * 
+     *
      * @param v1 The first {@link ICarvingVariation variation}.
      * @param v2 The second {@link ICarvingVariation variation}.
      * @return A positive integer if the first's order is greater, a negative integer if the second's is greater, and 0
@@ -26,7 +26,7 @@ public class CarvingUtils {
 
     /**
      * Gets an {@link ItemStack} representing the passed {@link ICarvingVariation}.
-     * 
+     *
      * @param variation An {@link ICarvingVariation}
      * @return An {@link ItemStack}
      */
@@ -48,7 +48,7 @@ public class CarvingUtils {
     /**
      * Creates a standard {@link ICarvingVariation} for the given data. Use this if you do not need any custom behavior
      * in your own variation.
-     * 
+     *
      * @param block    The block of the variation
      * @param metadata The metadata of both the block and item
      * @param order    The sorting order.
@@ -61,7 +61,7 @@ public class CarvingUtils {
     /**
      * Creates a standard {@link ICarvingGroup} for the given name. Use this if you do not need any custom behavior in
      * your own group.
-     * 
+     *
      * @param name The name of the group.
      * @return A standard {@link ICarvingGroup} instance.
      */

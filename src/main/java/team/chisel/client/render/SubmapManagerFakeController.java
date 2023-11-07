@@ -1,6 +1,13 @@
 package team.chisel.client.render;
 
-import static team.chisel.ctmlib.Dir.*;
+import static team.chisel.ctmlib.Dir.BOTTOM;
+import static team.chisel.ctmlib.Dir.BOTTOM_LEFT;
+import static team.chisel.ctmlib.Dir.BOTTOM_RIGHT;
+import static team.chisel.ctmlib.Dir.LEFT;
+import static team.chisel.ctmlib.Dir.RIGHT;
+import static team.chisel.ctmlib.Dir.TOP;
+import static team.chisel.ctmlib.Dir.TOP_LEFT;
+import static team.chisel.ctmlib.Dir.TOP_RIGHT;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;

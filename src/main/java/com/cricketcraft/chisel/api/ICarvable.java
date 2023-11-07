@@ -19,7 +19,7 @@ public interface ICarvable extends ICTMBlock<IVariationInfo> {
      * <p>
      * Typically you can refer this method to {@link CarvableHelper#getVariation(int)} but this method is provided for
      * more complex metadata handling.
-     * 
+     *
      * @param metadata The metadata of the block
      * @param world    {@link IBlockAccess} object, usually a world. Use of {@link IBlockAccess} Is necessary due to
      *                 this method's use in rendering.
@@ -34,7 +34,7 @@ public interface ICarvable extends ICTMBlock<IVariationInfo> {
 
     /**
      * Gets the {@link ISubmapManager} for this block when it is in item form.
-     * 
+     *
      * @return A {@link ISubmapManager}
      */
     @Override

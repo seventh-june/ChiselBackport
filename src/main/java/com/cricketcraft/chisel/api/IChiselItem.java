@@ -14,7 +14,7 @@ public interface IChiselItem {
 
     /**
      * Checks whether the chisel can have its GUI opened
-     * 
+     *
      * @param world  {@link World} object
      * @param player The player holding the chisel. It can always be assumed that the player's current item will be
      *               this.
@@ -25,7 +25,7 @@ public interface IChiselItem {
 
     /**
      * Called when an item is chiseled using this chisel
-     * 
+     *
      * @param world  {@link World} object
      * @param chisel The {@link ItemStack} representing the chisel
      * @param target The {@link ICarvingVariation} representing the target item
@@ -39,7 +39,7 @@ public interface IChiselItem {
      * <p>
      * It is not necessary to take into account whether this item <i>has</i> any variants, this method will only be
      * called after that check.
-     * 
+     *
      * @param world  {@link World} object
      * @param chisel The {@link ItemStack} representing the chisel
      * @param target The {@link ICarvingVariation} representing the target item
@@ -49,7 +49,7 @@ public interface IChiselItem {
 
     /**
      * Allows you to control if your item can chisel this block in the world.
-     * 
+     *
      * @param world    World object
      * @param player   {@link EntityPlayer The player} holding the chisel.
      * @param x        X coord of the block being chiseled
@@ -63,7 +63,7 @@ public interface IChiselItem {
 
     /**
      * Allows you to control if your item has chiseling modes.
-     * 
+     *
      * @param chisel The {@link ItemStack} representing the chisel.
      * @return True if the chisel supports modes. False otherwise.
      */
