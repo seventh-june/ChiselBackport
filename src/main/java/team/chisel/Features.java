@@ -47,7 +47,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import team.chisel.block.BlockAutoChisel;
 import team.chisel.block.BlockBeaconBase;
 import team.chisel.block.BlockCarvable;
-import team.chisel.block.BlockCarvableAntiBlock;
 import team.chisel.block.BlockCarvableBeacon;
 import team.chisel.block.BlockCarvableBookshelf;
 import team.chisel.block.BlockCarvableCarpet;
