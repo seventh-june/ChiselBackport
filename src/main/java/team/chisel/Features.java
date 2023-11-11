@@ -47,6 +47,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import team.chisel.block.BlockAutoChisel;
 import team.chisel.block.BlockBeaconBase;
 import team.chisel.block.BlockCarvable;
+import team.chisel.block.BlockCarvableAntiBlock;
 import team.chisel.block.BlockCarvableBeacon;
 import team.chisel.block.BlockCarvableBookshelf;
 import team.chisel.block.BlockCarvableCarpet;
@@ -3028,8 +3029,8 @@ public enum Features {
         @Override
         void addRecipes() {
             GameRegistry.addShapelessRecipe(
-                new ItemStack(ChiselBlocks.jackolantern[meta]),
-                new ItemStack(ChiselBlocks.pumpkin[meta], 1),
+                new ItemStack(jackolantern[meta]),
+                new ItemStack(pumpkin[meta], 1),
                 new ItemStack(Item.getItemFromBlock(Blocks.torch), 1));
         }
 
@@ -3580,7 +3581,7 @@ public enum Features {
                 '*',
                 new ItemStack(Blocks.stone, 1),
                 'X',
-                new ItemStack(ChiselBlocks.andesite, 1));
+                new ItemStack(andesite, 1));
         }
     },
 
