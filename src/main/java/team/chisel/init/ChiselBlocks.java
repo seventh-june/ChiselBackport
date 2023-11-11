@@ -4,7 +4,34 @@ import net.minecraft.block.Block;
 
 import cpw.mods.fml.common.registry.GameRegistry.ObjectHolder;
 import team.chisel.Chisel;
-import team.chisel.block.*;
+import team.chisel.block.BlockCarvable;
+import team.chisel.block.BlockCarvableBeacon;
+import team.chisel.block.BlockCarvableCarpet;
+import team.chisel.block.BlockCarvableGlass;
+import team.chisel.block.BlockCarvableGlowstone;
+import team.chisel.block.BlockCarvableIce;
+import team.chisel.block.BlockCarvableIceStairs;
+import team.chisel.block.BlockCarvableLayered;
+import team.chisel.block.BlockCarvablePackedIce;
+import team.chisel.block.BlockCarvablePackedIceStairs;
+import team.chisel.block.BlockCarvablePane;
+import team.chisel.block.BlockCarvablePowered;
+import team.chisel.block.BlockCarvablePumpkin;
+import team.chisel.block.BlockCarvableSand;
+import team.chisel.block.BlockCarvableSlab;
+import team.chisel.block.BlockCarvableStairs;
+import team.chisel.block.BlockCarvableTorch;
+import team.chisel.block.BlockCarvableWall;
+import team.chisel.block.BlockCloud;
+import team.chisel.block.BlockConcrete;
+import team.chisel.block.BlockGrimstone;
+import team.chisel.block.BlockHolystone;
+import team.chisel.block.BlockLavastone;
+import team.chisel.block.BlockPresent;
+import team.chisel.block.BlockRoadLine;
+import team.chisel.block.BlockSnakestone;
+import team.chisel.block.BlockSnakestoneObsidian;
+import team.chisel.block.BlockWaterstone;
 
 @ObjectHolder(Chisel.MOD_ID)
 public final class ChiselBlocks {

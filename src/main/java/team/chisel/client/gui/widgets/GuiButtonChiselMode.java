@@ -1,6 +1,8 @@
 package team.chisel.client.gui.widgets;
 
-import static team.chisel.client.gui.GuiChisel.*;
+import static team.chisel.client.gui.GuiChisel.TEXTURE_HEIGHT;
+import static team.chisel.client.gui.GuiChisel.TEXTURE_RESOURCE_LOCATION;
+import static team.chisel.client.gui.GuiChisel.TEXTURE_WIDTH;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;

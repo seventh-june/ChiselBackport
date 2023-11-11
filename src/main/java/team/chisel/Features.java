@@ -1,7 +1,21 @@
 package team.chisel;
 
-import static team.chisel.init.ChiselBlocks.*;
-import static team.chisel.utils.General.*;
+import static team.chisel.init.ChiselBlocks.andesite;
+import static team.chisel.init.ChiselBlocks.cubit;
+import static team.chisel.init.ChiselBlocks.diorite;
+import static team.chisel.init.ChiselBlocks.granite;
+import static team.chisel.init.ChiselBlocks.jackolantern;
+import static team.chisel.init.ChiselBlocks.neonite;
+import static team.chisel.init.ChiselBlocks.nucrete;
+import static team.chisel.init.ChiselBlocks.planks;
+import static team.chisel.init.ChiselBlocks.pumpkin;
+import static team.chisel.init.ChiselBlocks.stainedGlass;
+import static team.chisel.init.ChiselBlocks.stainedGlassForestry;
+import static team.chisel.init.ChiselBlocks.stainedGlassPane;
+import static team.chisel.init.ChiselBlocks.sveltstone;
+import static team.chisel.init.ChiselBlocks.torches;
+import static team.chisel.utils.General.featureColors;
+import static team.chisel.utils.General.sGNames;
 
 import java.util.List;
 
@@ -30,10 +44,52 @@ import com.google.common.collect.Lists;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import team.chisel.block.*;
+import team.chisel.block.BlockAutoChisel;
+import team.chisel.block.BlockBeaconBase;
+import team.chisel.block.BlockCarvable;
+import team.chisel.block.BlockCarvableAntiBlock;
+import team.chisel.block.BlockCarvableBeacon;
+import team.chisel.block.BlockCarvableBookshelf;
+import team.chisel.block.BlockCarvableCarpet;
+import team.chisel.block.BlockCarvableGlass;
+import team.chisel.block.BlockCarvableGlow;
+import team.chisel.block.BlockCarvableGlowie;
+import team.chisel.block.BlockCarvableGlowstone;
+import team.chisel.block.BlockCarvableIce;
+import team.chisel.block.BlockCarvableIceStairs;
+import team.chisel.block.BlockCarvableLayered;
+import team.chisel.block.BlockCarvablePackedIce;
+import team.chisel.block.BlockCarvablePackedIceStairs;
+import team.chisel.block.BlockCarvablePane;
+import team.chisel.block.BlockCarvablePowered;
+import team.chisel.block.BlockCarvablePumpkin;
+import team.chisel.block.BlockCarvableSand;
+import team.chisel.block.BlockCarvableSlab;
+import team.chisel.block.BlockCarvableStairs;
+import team.chisel.block.BlockCarvableTorch;
+import team.chisel.block.BlockCloud;
+import team.chisel.block.BlockConcrete;
+import team.chisel.block.BlockEldritch;
+import team.chisel.block.BlockGrimstone;
+import team.chisel.block.BlockHolystone;
+import team.chisel.block.BlockLavastone;
+import team.chisel.block.BlockLeaf;
+import team.chisel.block.BlockPresent;
+import team.chisel.block.BlockRoadLine;
+import team.chisel.block.BlockSnakestone;
+import team.chisel.block.BlockSnakestoneObsidian;
+import team.chisel.block.BlockWaterstone;
+import team.chisel.block.CarvableStairsMaker;
+import team.chisel.block.IStairsCreator;
 import team.chisel.carving.Carving;
-import team.chisel.client.render.*;
+import team.chisel.client.render.SubmapManagerAntiblock;
+import team.chisel.client.render.SubmapManagerCarpetFloor;
+import team.chisel.client.render.SubmapManagerCombinedCTM;
+import team.chisel.client.render.SubmapManagerFakeController;
+import team.chisel.client.render.SubmapManagerLeaves;
+import team.chisel.client.render.SubmapManagerSlab;
 import team.chisel.client.render.SubmapManagerSpecialMaterial;
+import team.chisel.client.render.SubmapManagerVoidstone;
 import team.chisel.compat.fmp.ItemBlockChiselTorchPart;
 import team.chisel.config.Configurations;
 import team.chisel.entity.EntityBallOMoss;
@@ -2973,8 +3029,8 @@ public enum Features {
         @Override
         void addRecipes() {
             GameRegistry.addShapelessRecipe(
-                new ItemStack(ChiselBlocks.jackolantern[meta]),
-                new ItemStack(ChiselBlocks.pumpkin[meta], 1),
+                new ItemStack(jackolantern[meta]),
+                new ItemStack(pumpkin[meta], 1),
                 new ItemStack(Item.getItemFromBlock(Blocks.torch), 1));
         }
 
@@ -3525,7 +3581,7 @@ public enum Features {
                 '*',
                 new ItemStack(Blocks.stone, 1),
                 'X',
-                new ItemStack(ChiselBlocks.andesite, 1));
+                new ItemStack(andesite, 1));
         }
     },
 
