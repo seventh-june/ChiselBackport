@@ -11,7 +11,7 @@ dependencies {
 
     shadowImplementation("com.github.GTNewHorizons:CTMLib:1.4.4:dev")
 
-    compileOnly("com.github.GTNewHorizons:waila:1.6.2:dev") {
+    compileOnly("com.github.GTNewHorizons:waila:1.6.3:dev") {
         transitive = false
     }
 
