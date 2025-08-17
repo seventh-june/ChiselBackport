@@ -405,12 +405,16 @@ tile.purpur.9.desc=Purpur Large Tile
 tile.purpur.10.desc=Ornate Purpur
 
 #Metal Blocks
-tile.chisel.aluminumblock.name=Block of Aluminum
+tile.chisel.aluminumblock.name=Block of Aluminium
 tile.chisel.bronzeblock.name=Block of Bronze
 tile.chisel.copperblock.name=Block of Copper
+tile.chisel.cobaltblock.name=Block of Cobalt
 tile.chisel.gold2.name=Block of Gold
+tile.chisel.invarblock.name=Block of Invar
 tile.chisel.iron2.name=Block of Iron
 tile.chisel.leadblock.name=Block of Lead
+tile.chisel.nickelblock.name=Block of Nickel
+tile.chisel.platinumblock.name=Block of Platinum
 tile.chisel.silverblock.name=Block of Silver
 tile.chisel.steelblock.name=Block of Steel
 tile.chisel.tinblock.name=Block of Tin
@@ -421,11 +425,13 @@ tile.metalOre.2.desc=Thermal
 tile.metalOre.3.desc=An Old Relic from the land of Oneteufyv
 tile.metalOre.4.desc=Egregiously Bordered Block
 tile.metalOre.5.desc=Fancy Bolted Plating
+tile.metalOre.6.desc=Egregiously Modernized
+tile.metalOre.7.desc=Scaffold
 
 #Stairs
-tile.chisel.aluminum_stairs.0.name=Aluminum Stairs
-tile.chisel.aluminum_stairs.1.name=Aluminum Stairs
-tile.chisel.aluminum_stairs.2.name=Aluminum Stairs
+tile.chisel.aluminum_stairs.0.name=Aluminium Stairs
+tile.chisel.aluminum_stairs.1.name=Aluminium Stairs
+tile.chisel.aluminum_stairs.2.name=Aluminium Stairs
 
 #Present Chest
 tile.chisel.present.name=Present
