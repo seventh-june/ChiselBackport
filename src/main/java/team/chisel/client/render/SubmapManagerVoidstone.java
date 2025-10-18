@@ -76,6 +76,10 @@ public class SubmapManagerVoidstone extends SubmapManagerBase {
             super.renderFaceZPos(block, x, y, z, null);
             clearOverrideBlockTexture();
         }
+
+        public void reset() {
+            this.submap = null;
+        }
     }
 
     @SideOnly(Side.CLIENT)
@@ -131,10 +135,10 @@ public class SubmapManagerVoidstone extends SubmapManagerBase {
     public RenderBlocks createRenderContext(RenderBlocks rendererOld, Block block, IBlockAccess world) {
         initStatics();
         RenderBlocksVoidstone rb = renderBlocksThreadLocal.get();
-
-        rb = new RenderBlocksVoidstone();
-        renderBlocksThreadLocal.set(rb);
-
+        if (rb == null) {
+            rb = new RenderBlocksVoidstone();
+            renderBlocksThreadLocal.set(rb);
+        } else rb.reset();
         RenderBlocks ctx = overlay.createRenderContext(rendererOld, block, world);
         rb.setRenderBoundsFromBlock(block);
         if (ctx instanceof RenderBlocksCTM) {
