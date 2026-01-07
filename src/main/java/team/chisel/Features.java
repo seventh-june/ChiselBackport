@@ -4613,7 +4613,46 @@ public enum Features {
                 'i',
                 new ItemStack(Items.iron_ingot, 1, 0));
         }
+    },
+
+    MOSS {
+
+        @Override
+        void addBlocks() {
+            BlockCarvable moss = (BlockCarvable) new BlockCarvable(Material.wood)
+                .setStepSound(Block.soundTypeDirt)
+                .setCreativeTab(ChiselTabs.tabOtherChiselBlocks)
+                .setHardness(1F)
+                .setResistance(1F);
+            moss.carverHelper.addVariation("tile.moss.0.desc", 0, "moss/moss");
+            moss.carverHelper.addVariation("tile.moss.1.desc", 1, "moss/pale_moss");
+            moss.carverHelper.addVariation("tile.moss.2.desc", 2, "moss/dark_moss");
+            moss.carverHelper.addVariation("tile.moss.3.desc", 3, "moss/dry_moss");
+            moss.carverHelper.addVariation("tile.moss.4.desc", 4, "moss/golden_moss");
+            moss.carverHelper.addVariation("tile.moss.5.desc", 5, "moss/infused_moss");
+            moss.carverHelper.addVariation("tile.moss.6.desc", 6, "moss/mutated_moss");
+            moss.carverHelper.addVariation("tile.moss.7.desc", 7, "moss/scorched_moss");
+            moss.carverHelper.addVariation("tile.moss.8.desc", 8, "moss/vivid_moss");
+            moss.carverHelper.addVariation("tile.moss.9.desc", 9, "moss/peat_moss");
+            moss.carverHelper.addVariation("tile.moss.10.desc", 10, "moss/pink_sphagnum_moss");
+            moss.carverHelper.registerAll(moss, "moss");
+            Carving.chisel.registerOre("moss", "blockMoss");
+        }
+
+        @Override
+        void addRecipes() {
+            GameRegistry.addRecipe(
+                new ItemStack(ChiselBlocks.lantern, 1, 0),
+                "ggg",
+                "gMg",
+                "ggg",
+                'M',
+                new ItemStack(Items.ballomoss, 1),
+                'g',
+                new ItemStack(Blocks.dirt, 1));
+        }
     };
+
 
     private static final String[] dyeOres = { "dyeBlack", "dyeRed", "dyeGreen", "dyeBrown", "dyeBlue", "dyePurple",
         "dyeCyan", "dyeLightGray", "dyeGray", "dyePink", "dyeLime", "dyeYellow", "dyeLightBlue", "dyeMagenta",

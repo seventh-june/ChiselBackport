@@ -177,5 +177,9 @@ public final class ChiselBlocks {
     public static final BlockCarvable lantern = null;
     public static final BlockCarvable sheetmetal = null;
 
+    // June Additions
+    public static final BlockCarvable moss = null;
+    public static final BlockCarvableCarpet moss_carpet = null;
+
     private ChiselBlocks() {}
 }
