@@ -2727,5 +2727,19 @@ tile.sheetmetal.7.desc=Paneling (Rusty)
 tile.sheetmetal.8.desc=Plating (Rusty)
 tile.sheetmetal.9.desc=Treading (Rusty)
 
+#Moss
+tile.chisel.moss.name=Moss
+tile.moss.0.desc=Lush
+tile.moss.1.desc=Pale
+tile.moss.2.desc=Dark
+tile.moss.3.desc=Dry
+tile.moss.4.desc=Golden
+tile.moss.5.desc=Infused
+tile.moss.6.desc=Mutated
+tile.moss.7.desc=Scorched
+tile.moss.8.desc=Vivid
+tile.moss.9.desc=Peaty
+tile.moss.10.desc=Pink Sphagnum
+
 tile.chisel.amber.name=Block of Amber
 tile.chisel.bloodBrick.name=Bloodstone Brick
