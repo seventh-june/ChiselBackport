@@ -4620,7 +4620,7 @@ public enum Features {
         @Override
         void addBlocks() {
             BlockCarvable moss = (BlockCarvable) new BlockCarvable(Material.wood)
-                .setStepSound(Block.soundTypeDirt)
+                .setStepSound(Block.soundTypeGrass)
                 .setCreativeTab(ChiselTabs.tabOtherChiselBlocks)
                 .setHardness(1F)
                 .setResistance(1F);
@@ -4642,12 +4642,12 @@ public enum Features {
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(ChiselBlocks.lantern, 1, 0),
+                new ItemStack(ChiselBlocks.moss, 1, 0),
                 "ggg",
                 "gMg",
                 "ggg",
                 'M',
-                new ItemStack(Items.ballomoss, 1),
+                new ItemStack(ChiselItems.ballomoss, 1),
                 'g',
                 new ItemStack(Blocks.dirt, 1));
         }
