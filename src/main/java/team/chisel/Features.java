@@ -4619,8 +4619,7 @@ public enum Features {
 
         @Override
         void addBlocks() {
-            BlockCarvable moss = (BlockCarvable) new BlockCarvable(Material.wood)
-                .setStepSound(Block.soundTypeGrass)
+            BlockCarvable moss = (BlockCarvable) new BlockCarvable(Material.wood).setStepSound(Block.soundTypeGrass)
                 .setCreativeTab(ChiselTabs.tabOtherChiselBlocks)
                 .setHardness(1F)
                 .setResistance(1F);
@@ -4652,7 +4651,6 @@ public enum Features {
                 new ItemStack(Blocks.dirt, 1));
         }
     };
-
 
     private static final String[] dyeOres = { "dyeBlack", "dyeRed", "dyeGreen", "dyeBrown", "dyeBlue", "dyePurple",
         "dyeCyan", "dyeLightGray", "dyeGray", "dyePink", "dyeLime", "dyeYellow", "dyeLightBlue", "dyeMagenta",
