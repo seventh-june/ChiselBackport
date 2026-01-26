@@ -180,6 +180,18 @@ public final class ChiselBlocks {
     // June Additions
     public static final BlockCarvable moss = null;
     public static final BlockCarvableCarpet moss_carpet = null;
+    public static final BlockCarvable cobalt = null;
+    public static final BlockCarvable electrum = null;
+    public static final BlockCarvable invar = null;
+    public static final BlockCarvable nickel = null;
+    public static final BlockCarvable platinum = null;
+    public static final BlockCarvable wrought_iron = null;
+    public static final BlockCarvable stainless_steel = null;
+    public static final BlockCarvable titanium = null;
+    public static final BlockCarvable tungstensteel = null;
+    public static final BlockCarvable rpp = null;
+    public static final BlockCarvable iridium = null;
+    public static final BlockCarvable osmium = null;
 
     private ChiselBlocks() {}
 }
