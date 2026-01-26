@@ -4591,7 +4591,7 @@ public enum Features {
         @Override
         void addRecipes() {
             GameRegistry.addRecipe(
-                new ItemStack(moss, 1, 0),
+                new ItemStack(moss, 8, 0),
                 "ggg",
                 "gMg",
                 "ggg",
