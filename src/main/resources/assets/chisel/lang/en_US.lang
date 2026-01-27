@@ -2768,6 +2768,25 @@ tile.numetalOre.4.desc=Machinery
 tile.numetalOre.5.desc=Scaffolding
 tile.numetalOre.6.desc=Thermal
 
+tile.chisel.basaltblock.name=Basalt
+tile.chisel.tuffblock.name=Tuff
+tile.chisel.purpuriteblock.name=Purpurite
+tile.chisel.prismarineblock.name=Prismarine
+tile.chisel.darkprismarineblock.name=Dark Prismarine
+tile.chisel.dripstoneblock.name=Dripstone
+tile.chisel.coralstoneblock.name=Coralstone
+tile.chisel.amethystblock.name=Amethyst
+tile.chisel.blackstoneblock.name=Blackstone
+
+tile.stones.0.desc=Raw
+tile.stones.1.desc=Bricks
+tile.stones.2.desc=Cobblestone
+tile.stones.3.desc=Mossy
+tile.stones.4.desc=Ornate
+tile.stones.5.desc=Pillar
+tile.stones.6.desc=Polished
+tile.stones.7.desc=Prismatic
+tile.stones.8.desc=Tiles
 
 tile.newmetalOre.0.desc=Machinery
 tile.newmetalOre.1.desc=Egregiously Modern

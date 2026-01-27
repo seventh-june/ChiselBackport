@@ -193,6 +193,14 @@ public final class ChiselBlocks {
     public static final BlockCarvable iridium = null;
     public static final BlockCarvable osmium = null;
     public static final BlockCarvable basalt = null;
+    public static final BlockCarvable tuff = null;
+    public static final BlockCarvable purpurite = null;
+    public static final BlockCarvable prismarine = null;
+    public static final BlockCarvable darkprismarine = null;
+    public static final BlockCarvable dripstone = null;
+    public static final BlockCarvable coralstone = null;
+    public static final BlockCarvable amethyst = null;
+    public static final BlockCarvable blackstone = null;
 
     private ChiselBlocks() {}
 }
