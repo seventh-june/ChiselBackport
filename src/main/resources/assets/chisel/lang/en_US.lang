@@ -101,6 +101,8 @@ tile.diorite.3.desc=Diorite Bricks
 tile.diorite.4.desc=Ornate Diorite
 tile.diorite.5.desc=Prismatic Diorite
 tile.diorite.6.desc=Diorite Small Tiles
+tile.diorite.7.desc=Cobbled Diorite
+tile.diorite.8.desc=Mossy Diorite
 
 #Andesite
 tile.chisel.andesite.name=Andesite
@@ -111,6 +113,8 @@ tile.andesite.3.desc=Andesite Bricks
 tile.andesite.4.desc=Ornate Andesite
 tile.andesite.5.desc=Prismatic Andesite
 tile.andesite.6.desc=Andesite Small Tiles
+tile.andesite.7.desc=Cobbled Andesite
+tile.andesite.8.desc=Mossy Andesite
 
 #Granite
 tile.chisel.granite.name=Granite
@@ -121,6 +125,8 @@ tile.granite.3.desc=Granite Bricks
 tile.granite.4.desc=Ornate Granite
 tile.granite.5.desc=Prismatic Granite
 tile.granite.6.desc=Granite Small Tiles
+tile.granite.7.desc=Cobbled Granite
+tile.granite.8.desc=Mossy Granite
 
 #Auto Chisel
 tile.chisel.autoChisel.name=Auto Chisel

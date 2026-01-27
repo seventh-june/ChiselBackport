@@ -192,6 +192,7 @@ public final class ChiselBlocks {
     public static final BlockCarvable rpp = null;
     public static final BlockCarvable iridium = null;
     public static final BlockCarvable osmium = null;
+    public static final BlockCarvable basalt = null;
 
     private ChiselBlocks() {}
 }
