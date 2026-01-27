@@ -201,6 +201,17 @@ public final class ChiselBlocks {
     public static final BlockCarvable coralstone = null;
     public static final BlockCarvable amethyst = null;
     public static final BlockCarvable blackstone = null;
+    public static final BlockCarvable spinel = null;
+    public static final BlockCarvable ruby = null;
+    public static final BlockCarvable amber2 = null;
+    public static final BlockCarvable jade = null;
+    public static final BlockCarvable fluorite = null;
+    public static final BlockCarvable opal = null;
+    public static final BlockCarvable charoite = null;
+    public static final BlockCarvable rhodochrosite = null;
+    public static final BlockCarvable netherquartz = null;
+    public static final BlockCarvable labradorite = null;
+    public static final BlockCarvable onyx = null;
 
     private ChiselBlocks() {}
 }

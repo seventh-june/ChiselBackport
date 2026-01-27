@@ -2797,6 +2797,30 @@ tile.newetalOre.5.desc=Egregious
 tile.newetalOre.6.desc=Scaffolding
 tile.newetalOre.7.desc=Thermal
 
+tile.chisel.spinel.name=Block of Spinel
+tile.chisel.ruby.name=Block of Ruby
+tile.chisel.amber.name=Block of Amber
+tile.chisel.jade.name=Block of Jade
+tile.chisel.fluorite.name=Block of Fluorite
+tile.chisel.opal.name=Block of Opal
+tile.chisel.charoite.name=Block of Charoite
+tile.chisel.spinel.name=Block of Spinel
+tile.chisel.rhodochrosite.name=Block of Rhodochrosite
+tile.chisel.netherquartz.name=Block of Nether Quartz
+tile.chisel.labradorite.name=Block of Labradorite
+tile.chisel.onyx.name=Block of Onyx
+
+tile.gemstones.0.desc=Bismuth
+tile.gemstones.1.desc=Bordered
+tile.gemstones.2.desc=Encased
+tile.gemstones.3.desc=Faceted
+tile.gemstones.4.desc=Ornate Tiles
+tile.gemstones.5.desc=Panel
+tile.gemstones.6.desc=Polished
+tile.gemstones.7.desc=Raw Mineral
+tile.gemstones.8.desc=Smooth
+tile.gemstones.9.desc=Hopper Crystal
+tile.gemstones.10.desc=Simple Tiles
 
 tile.chisel.amber.name=Block of Amber
 tile.chisel.bloodBrick.name=Bloodstone Brick
