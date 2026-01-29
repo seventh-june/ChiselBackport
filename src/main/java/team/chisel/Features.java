@@ -5315,6 +5315,36 @@ public enum Features {
             onyx.carverHelper.registerAll(onyx, "onyx");
             Carving.chisel.registerOre("onyx", "onyxBlock");
         }
+    },
+    PLASTICBLOCK {
+
+        @Override
+        void addBlocks() {
+            BlockCarvable plasticblock = (BlockCarvable) new BlockCarvable(Material.iron)
+                .setCreativeTab(ChiselTabs.tabOtherChiselBlocks)
+                .setHardness(1.0F)
+                .setResistance(5F)
+                .setStepSound(Block.soundTypeStone);
+
+            plasticblock.carverHelper.addVariation("tile.plastic.0.desc", 0, "plastic/plastic0");
+            plasticblock.carverHelper.addVariation("tile.plastic.1.desc", 1, "plastic/plastic1");
+            plasticblock.carverHelper.addVariation("tile.plastic.2.desc", 2, "plastic/plastic2");
+            plasticblock.carverHelper.addVariation("tile.plastic.3.desc", 3, "plastic/plastic3");
+            plasticblock.carverHelper.addVariation("tile.plastic.4.desc", 4, "plastic/plastic4");
+            plasticblock.carverHelper.addVariation("tile.plastic.5.desc", 5, "plastic/plastic5");
+            plasticblock.carverHelper.addVariation("tile.plastic.6.desc", 6, "plastic/plastic6");
+            plasticblock.carverHelper.addVariation("tile.plastic.7.desc", 7, "plastic/plastic7");
+            plasticblock.carverHelper.addVariation("tile.plastic.8.desc", 8, "plastic/plastic8");
+            plasticblock.carverHelper.addVariation("tile.plastic.9.desc", 9, "plastic/plastic9");
+            plasticblock.carverHelper.addVariation("tile.plastic.10.desc", 10, "plastic/plastic10");
+            plasticblock.carverHelper.addVariation("tile.plastic.11.desc", 11, "plastic/plastic11");
+            plasticblock.carverHelper.addVariation("tile.plastic.12.desc", 12, "plastic/plastic12");
+            plasticblock.carverHelper.addVariation("tile.plastic.13.desc", 13, "plastic/plastic13");
+            plasticblock.carverHelper.addVariation("tile.plastic.14.desc", 14, "plastic/plastic14");
+            plasticblock.carverHelper.addVariation("tile.plastic.15.desc", 15, "plastic/plastic15");
+            plasticblock.carverHelper.registerAll(plasticblock, "plasticblock");
+            Carving.chisel.registerOre("plasticblock", "plasticblock");
+        }
     };
 
     private static final String[] dyeOres = { "dyeBlack", "dyeRed", "dyeGreen", "dyeBrown", "dyeBlue", "dyePurple",

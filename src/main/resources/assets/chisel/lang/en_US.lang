@@ -2809,6 +2809,7 @@ tile.chisel.rhodochrosite.name=Block of Rhodochrosite
 tile.chisel.netherquartz.name=Block of Nether Quartz
 tile.chisel.labradorite.name=Block of Labradorite
 tile.chisel.onyx.name=Block of Onyx
+tile.chisel.plasticblock.name=Plastic
 
 tile.gemstones.0.desc=Bismuth
 tile.gemstones.1.desc=Bordered
@@ -2821,6 +2822,23 @@ tile.gemstones.7.desc=Raw Mineral
 tile.gemstones.8.desc=Smooth
 tile.gemstones.9.desc=Hopper Crystal
 tile.gemstones.10.desc=Simple Tiles
+
+tile.plastic.0.desc=Polyethylene Sheets
+tile.plastic.1.desc=Polyvinyl Chloride Pipes
+tile.plastic.2.desc=Polytetrafluoroethylene Bricks
+tile.plastic.3.desc=Polybenzimidazole Grates
+tile.plastic.4.desc=Kevlar Netting
+tile.plastic.5.desc=Epoxy Resin Bubbles
+tile.plastic.6.desc=Radox Polymer Casings
+tile.plastic.7.desc=Red Nondescript Plastic Brick
+tile.plastic.8.desc=Orange Nondescript Plastic Brick
+tile.plastic.9.desc=Yellow Nondescript Plastic Brick
+tile.plastic.10.desc=Green Nondescript Plastic Brick
+tile.plastic.11.desc=Blue Nondescript Plastic Brick
+tile.plastic.12.desc=Purple Nondescript Plastic Brick
+tile.plastic.13.desc=Gray Nondescript Plastic Brick
+tile.plastic.14.desc=Black Nondescript Plastic Brick
+tile.plastic.15.desc=White Nondescript Plastic Brick
 
 tile.chisel.amber.name=Block of Amber
 tile.chisel.bloodBrick.name=Bloodstone Brick

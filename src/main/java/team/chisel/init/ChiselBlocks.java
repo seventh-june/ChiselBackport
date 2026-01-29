@@ -212,6 +212,7 @@ public final class ChiselBlocks {
     public static final BlockCarvable netherquartz = null;
     public static final BlockCarvable labradorite = null;
     public static final BlockCarvable onyx = null;
+    public static final BlockCarvable plasticblock = null;
 
     private ChiselBlocks() {}
 }
