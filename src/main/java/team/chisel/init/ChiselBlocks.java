@@ -214,6 +214,7 @@ public final class ChiselBlocks {
     public static final BlockCarvable onyx = null;
     public static final BlockCarvable plasticblock = null;
     public static final BlockCarvable apatite = null;
+    public static final BlockCarvable alabaster = null;
 
     private ChiselBlocks() {}
 }

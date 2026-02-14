@@ -268,7 +268,6 @@ public enum Features {
                     'B',
                     new ItemStack(antiBlock, 1, OreDictionary.WILDCARD_VALUE)));
         }
-
         @Override
         boolean needsMetaRecipes() {
             return true;
@@ -5368,6 +5367,31 @@ public enum Features {
             plasticblock.carverHelper.addVariation("tile.plastic.15.desc", 15, "plastic/plastic15");
             plasticblock.carverHelper.registerAll(plasticblock, "plasticblock");
             Carving.chisel.registerOre("plasticblock", "plasticblock");
+        }
+    },
+    ALABASTER {
+
+        @Override
+        void addBlocks() {
+            BlockCarvable alabaster = (BlockBeaconBase) new BlockBeaconBase()
+                .setCreativeTab(ChiselTabs.tabOtherChiselBlocks)
+                .setHardness(5.0F)
+                .setResistance(10.0F)
+                .setStepSound(Block.soundTypeMetal);
+            alabaster.carverHelper.addVariation("tile.alabaster.0.desc", 0, "alabaster/alabaster");
+            alabaster.carverHelper.addVariation("tile.alabaster.1.desc", 1, "alabaster/alabasterCalcic");
+            alabaster.carverHelper.addVariation("tile.alabaster.2.desc", 2, "alabaster/alabasterChartreuse");
+            alabaster.carverHelper.addVariation("tile.alabaster.3.desc", 3, "alabaster/alabasterLavender");
+            alabaster.carverHelper.addVariation("tile.alabaster.4.desc", 4, "alabaster/alabasterLilac");
+            alabaster.carverHelper.addVariation("tile.alabaster.5.desc", 5, "alabaster/alabasterMauve");
+            alabaster.carverHelper.addVariation("tile.alabaster.6.desc", 6, "alabaster/alabasterPale");
+            alabaster.carverHelper.addVariation("tile.alabaster.7.desc", 7, "alabaster/alabasterPeach");
+            alabaster.carverHelper.addVariation("tile.alabaster.8.desc", 8, "alabaster/alabasterPeriwinkle");
+            alabaster.carverHelper.addVariation("tile.alabaster.9.desc", 9, "alabaster/alabasterSageGreen");
+            alabaster.carverHelper.addVariation("tile.alabaster.10.desc", 10, "alabaster/alabasterSkyBlue");
+            alabaster.carverHelper.addVariation("tile.alabaster.11.desc", 11, "alabaster/alabasterYellow");
+            alabaster.carverHelper.registerAll(alabaster, "alabaster");
+            Carving.chisel.registerOre("alabaster", "alabasterBlock");
         }
     };
 
