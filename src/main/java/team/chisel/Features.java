@@ -268,6 +268,7 @@ public enum Features {
                     'B',
                     new ItemStack(antiBlock, 1, OreDictionary.WILDCARD_VALUE)));
         }
+
         @Override
         boolean needsMetaRecipes() {
             return true;
