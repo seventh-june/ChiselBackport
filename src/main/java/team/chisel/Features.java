@@ -5111,8 +5111,44 @@ public enum Features {
             albumblock2.carverHelper.addVariation("tile.album2.16.desc", 0, "album/cork_tree");
             albumblock2.carverHelper.addVariation("tile.album2.17.desc", 1, "album/folie_a_deux");
             albumblock2.carverHelper.addVariation("tile.album2.18.desc", 2, "album/a_fever_you_cant_sweat_out");
+            albumblock2.carverHelper.addVariation("tile.album2.19.desc", 3, "album/birdbrain");
+            albumblock2.carverHelper.addVariation("tile.album2.20.desc", 4, "album/fancy_that");
+            albumblock2.carverHelper.addVariation("tile.album2.21.desc", 5, "album/paper_mache_dream_balloon");
+            albumblock2.carverHelper.addVariation("tile.album2.22.desc", 6, "album/wallsocket");
+            albumblock2.carverHelper.addVariation("tile.album2.23.desc", 7, "album/shyga");
+            albumblock2.carverHelper.addVariation("tile.album2.24.desc", 8, "album/flawless");
+            albumblock2.carverHelper.addVariation("tile.album2.25.desc", 9, "album/katamari");
+            albumblock2.carverHelper.addVariation("tile.album2.26.desc", 10, "album/red_barn_radio");
+            albumblock2.carverHelper.addVariation("tile.album2.27.desc", 11, "album/ceres_and_calypso");
+            albumblock2.carverHelper.addVariation("tile.album2.28.desc", 12, "album/komm_susser_tod");
+            albumblock2.carverHelper.addVariation("tile.album2.29.desc", 13, "album/midwest_princess");
+            albumblock2.carverHelper.addVariation("tile.album2.30.desc", 14, "album/brat");
+            albumblock2.carverHelper.addVariation("tile.album2.31.desc", 15, "album/perfect_persona");
             albumblock2.carverHelper.registerBlock(albumblock2, "albumblock2");
             albumblock2.carverHelper.registerVariations("albumblock");
+
+            BlockCarvable albumblock3 = (BlockCarvable) new BlockCarvable(Material.wood)
+                .setStepSound(Block.soundTypeWood)
+                .setCreativeTab(ChiselTabs.tabModdedChiselBlocks)
+                .setHardness(5F)
+                .setResistance(10F);
+            albumblock3.carverHelper.addVariation("tile.album3.32.desc", 0, "album/float_along");
+            albumblock3.carverHelper.addVariation("tile.album3.33.desc", 1, "album/chromakopia");
+            albumblock3.carverHelper.addVariation("tile.album3.34.desc", 2, "album/danganronpa_v2");
+            albumblock3.carverHelper.addVariation("tile.album3.35.desc", 3, "album/danganronpa_v3");
+            albumblock3.carverHelper.addVariation("tile.album3.36.desc", 4, "album/bronco");
+            albumblock3.carverHelper.addVariation("tile.album3.37.desc", 5, "album/plastic_beach");
+            albumblock3.carverHelper.addVariation("tile.album3.38.desc", 6, "album/triple_baka");
+            albumblock3.carverHelper.addVariation("tile.album3.39.desc", 7, "album/cowboy_carter");
+            albumblock3.carverHelper.addVariation("tile.album3.40.desc", 8, "album/phantom_island_1");
+            albumblock3.carverHelper.addVariation("tile.album3.41.desc", 9, "album/alligator_bites");
+            albumblock3.carverHelper.addVariation("tile.album3.42.desc", 10, "album/chiseled_baka");
+            albumblock3.carverHelper.addVariation("tile.album3.43.desc", 11, "album/magnet");
+            albumblock3.carverHelper.addVariation("tile.album3.44.desc", 12, "album/digital_girl");
+            albumblock3.carverHelper.addVariation("tile.album3.45.desc", 13, "album/digital_girl_1");
+            albumblock3.carverHelper.addVariation("tile.album3.46.desc", 14, "album/to_hell_with_it");
+            albumblock3.carverHelper.registerBlock(albumblock3, "albumblock3");
+            albumblock3.carverHelper.registerVariations("albumblock");
 
             albumblock.carverHelper.registerAll(albumblock, "albumblock");
             Carving.chisel.registerOre("albumblock", "albumblock");
