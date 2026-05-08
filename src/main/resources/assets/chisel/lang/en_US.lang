@@ -2921,7 +2921,7 @@ tile.album3.42.desc=Chiseled Triple Blocka
 tile.album3.43.desc=Magnet
 tile.album3.44.desc=Digital Girl
 tile.album3.45.desc=Digital World
-tiile.album3.46.desc=Pain
+tile.album3.46.desc=Pain
 
 tile.chisel.brutalism.name=Brutalist Block
 tile.brutalism.0.desc=Plain Cement
@@ -2962,6 +2962,29 @@ tile.alabaster.7.desc=Periwinkle
 tile.alabaster.8.desc=Sage Green
 tile.alabaster.9.desc=Sky Blue
 tile.alabaster.10.desc=Cream
+
+tile.chisel.sulfurBlock.name=Block of Sulfur
+tile.chisel.cinnabarBlock.name=Block of Cinnabar
+tile.chisel.tuffBlock.name=Tuff
+tile.chisel.coral2.name=Coralstone
+tile.chisel.prismarineBlock.name=Prismarine
+tile.chisel.darkprismarineBlock.name=Dark Prismarine
+tile.chisel.deepslateBlock.name=Deepslate
+tile.chisel.dripstoneBlock.name=Dripstone
+tile.chisel.basaltBlock.name=Basalt
+tile.stones.0.desc=Raw
+tile.stones.1.desc=Bricks
+tile.stones.2.desc=Chiseled
+tile.stones.3.desc=Cobblestone
+tile.stones.4.desc=Mossy
+tile.stones.5.desc=Pillar
+tile.stones.6.desc=Polished
+tile.stones.7.desc=Prism
+tile.stones.8.desc=Tiles
+tile.stones.9.desc=Ornate
+
+tile.sulfur.0.desc=Potent Sulfur
+
 
 tile.chisel.road.name=Road Block
 tile.chisel.road2.name=Road Block
