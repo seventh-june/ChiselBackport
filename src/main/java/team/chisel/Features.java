@@ -5300,6 +5300,7 @@ public enum Features {
     },
 
     SULFUR {
+
         @Override
         void addBlocks() {
             BlockCarvable sulfur = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5323,6 +5324,7 @@ public enum Features {
     },
 
     CINNABAR {
+
         @Override
         void addBlocks() {
             BlockCarvable cinnabar = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5345,6 +5347,7 @@ public enum Features {
     },
 
     TUFF {
+
         @Override
         void addBlocks() {
             BlockCarvable tuff = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5362,6 +5365,7 @@ public enum Features {
     },
 
     PRISMARINE {
+
         @Override
         void addBlocks() {
             BlockCarvable prismarine = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5382,6 +5386,7 @@ public enum Features {
     },
 
     DRIPSTONE {
+
         @Override
         void addBlocks() {
             BlockCarvable dripstone = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5404,6 +5409,7 @@ public enum Features {
     },
 
     DARK_PRISMARINE {
+
         @Override
         void addBlocks() {
             BlockCarvable darkprismarine = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5414,7 +5420,8 @@ public enum Features {
             darkprismarine.carverHelper.addVariation("tile.stones.0.desc", 0, "darkprismarine/darkprismarine");
             darkprismarine.carverHelper.addVariation("tile.stones.1.desc", 1, "darkprismarine/darkprismarine_bricks");
             darkprismarine.carverHelper.addVariation("tile.stones.9.desc", 2, "darkprismarine/darkprismarine_ornate");
-            darkprismarine.carverHelper.addVariation("tile.stones.3.desc", 3, "darkprismarine/darkprismarine_cobblestone");
+            darkprismarine.carverHelper
+                .addVariation("tile.stones.3.desc", 3, "darkprismarine/darkprismarine_cobblestone");
             darkprismarine.carverHelper.addVariation("tile.stones.4.desc", 4, "darkprismarine/darkprismarine_mossy");
             darkprismarine.carverHelper.addVariation("tile.stones.5.desc", 5, "darkprismarine/darkprismarine_pillar");
             darkprismarine.carverHelper.addVariation("tile.stones.6.desc", 6, "darkprismarine/darkprismarine_polished");
@@ -5426,6 +5433,7 @@ public enum Features {
     },
 
     DEEPSLATE {
+
         @Override
         void addBlocks() {
             BlockCarvable deepslate = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
@@ -5443,6 +5451,7 @@ public enum Features {
     },
 
     BASALT {
+
         @Override
         void addBlocks() {
             BlockCarvable basalt = (BlockCarvable) new BlockCarvable().setStepSound(Block.soundTypeStone)
