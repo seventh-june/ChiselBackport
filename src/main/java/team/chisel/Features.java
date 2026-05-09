@@ -6056,7 +6056,8 @@ public enum Features {
             abyssaline.carverHelper.addVariation("tile.abyssaline.7.desc", 7, "abyssaline/abyssaline_tiles_charged");
             abyssaline.carverHelper.addVariation("tile.abyssaline.8.desc", 8, "abyssaline/abyssaline_plating");
             abyssaline.carverHelper.addVariation("tile.abyssaline.9.desc", 9, "abyssaline/abyssaline_plating_charged");
-            abyssaline.carverHelper.addVariation("tile.abyssaline.10.desc", 10, "abyssaline/chiseled_abyssaline_bricks");
+            abyssaline.carverHelper
+                .addVariation("tile.abyssaline.10.desc", 10, "abyssaline/chiseled_abyssaline_bricks");
 
             abyssaline.carverHelper.registerAll(abyssaline, "abyssalineBlock");
         }
